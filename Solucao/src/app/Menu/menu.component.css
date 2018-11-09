@@ -1,0 +1,41 @@
+.menu{
+    background-color: #43517A ;
+}
+
+.menu-links{
+    margin-left: 15%;
+}
+
+.menu-links a {
+    color: #A9881C;
+    font-size: 1.5em;
+}
+
+.signup-btn{
+    color: white!important;
+    background-color: #A9881C;
+}
+
+.main-buttons{
+    border-radius: 2em;
+    font-size: 1rem!important;
+}
+
+.signin-btn{
+    border-color: #A9881C;
+    background-color: #43517A ;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.logo{
+    margin-top: 0.3em;
+    background-image: url(img/logo_wse_1.png);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
