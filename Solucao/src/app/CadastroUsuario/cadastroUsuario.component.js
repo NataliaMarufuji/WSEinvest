@@ -5,28 +5,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var MenuComponent = /** @class */ (function () {
-    function MenuComponent() {
-        this.loginOuCadastro = false;
+var CadastroUsuarioComponent = /** @class */ (function () {
+    function CadastroUsuarioComponent() {
     }
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], MenuComponent.prototype, "loginOuCadastro", void 0);
-    MenuComponent = __decorate([
+    CadastroUsuarioComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'menu-inicial',
-            templateUrl: './menu.component.html',
-            styleUrls: ['./menu.component.css']
+            selector: 'cadastro-usuario',
+            templateUrl: './cadastroUsuario.component.html',
+            styleUrls: ['./cadastroUsuario.component.css']
         })
-    ], MenuComponent);
-    return MenuComponent;
+    ], CadastroUsuarioComponent);
+    return CadastroUsuarioComponent;
 }());
-exports.MenuComponent = MenuComponent;
-//# sourceMappingURL=menu.component.js.map
+exports.CadastroUsuarioComponent = CadastroUsuarioComponent;
+//# sourceMappingURL=cadastroUsuario.component.js.map

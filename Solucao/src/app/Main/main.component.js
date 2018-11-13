@@ -10,23 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var MenuComponent = /** @class */ (function () {
-    function MenuComponent() {
-        this.loginOuCadastro = false;
+var MainComponent = /** @class */ (function () {
+    function MainComponent() {
+        $.getScript('app/Scripts/carousel.min.js');
     }
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
-    ], MenuComponent.prototype, "loginOuCadastro", void 0);
-    MenuComponent = __decorate([
+    MainComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'menu-inicial',
-            templateUrl: './menu.component.html',
-            styleUrls: ['./menu.component.css']
-        })
-    ], MenuComponent);
-    return MenuComponent;
+            selector: 'main',
+            templateUrl: './main.component.html',
+            styleUrls: ['./main.component.css']
+        }),
+        __metadata("design:paramtypes", [])
+    ], MainComponent);
+    return MainComponent;
 }());
-exports.MenuComponent = MenuComponent;
-//# sourceMappingURL=menu.component.js.map
+exports.MainComponent = MainComponent;
+//# sourceMappingURL=main.component.js.map

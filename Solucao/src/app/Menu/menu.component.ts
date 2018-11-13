@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -8,4 +8,5 @@ import { ActivatedRoute, Router } from '@angular/router';
     styleUrls: ['./menu.component.css']
 })
 export class MenuComponent { 
+    @Input() loginOuCadastro = false;
 }

@@ -12,7 +12,11 @@ var app_component_1 = require("./app.component");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
 var app_routes_1 = require("./app.routes");
+var cadastroUsuario_component_1 = require("./CadastroUsuario/cadastroUsuario.component");
+var listagemBolsa_component_1 = require("./ListagemBolsa/listagemBolsa.component");
+var login_component_1 = require("./Login/login.component");
 var menu_component_1 = require("./Menu/menu.component");
+var main_component_1 = require("./Main/main.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -23,7 +27,7 @@ var AppModule = /** @class */ (function () {
                 http_1.HttpModule,
                 app_routes_1.routing,
             ],
-            declarations: [app_component_1.AppComponent, menu_component_1.MenuComponent],
+            declarations: [app_component_1.AppComponent, menu_component_1.MenuComponent, main_component_1.MainComponent, listagemBolsa_component_1.ListagemBolsaComponent, login_component_1.LoginComponent, cadastroUsuario_component_1.CadastroUsuarioComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

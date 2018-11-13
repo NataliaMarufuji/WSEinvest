@@ -4,7 +4,12 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { routing }  from './app.routes';
+import { CadastroUsuarioComponent }  from './CadastroUsuario/cadastroUsuario.component';
+import { ListagemBolsaComponent }  from './ListagemBolsa/listagemBolsa.component';
+import { LoginComponent }  from './Login/login.component';
 import { MenuComponent }  from './Menu/menu.component';
+import { MainComponent }  from './Main/main.component';
+
 
 @NgModule({
     imports: [ 
@@ -12,7 +17,7 @@ import { MenuComponent }  from './Menu/menu.component';
         HttpModule, 
         routing, 
     ],
-    declarations: [ AppComponent, MenuComponent ],
+    declarations: [ AppComponent, MenuComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }
