@@ -1,8 +1,39 @@
 .main-content{
     background-color: #1F3857;
+    color: white;
+    background-image: url('../img/stock1.png');
 }
 
 .signup-btn{
     color: white!important;
     background-color: #A9881C;
+    border-radius: 2em;
+    font-size: 1rem!important;
+}
+
+.carousel-item-slide{
+    visibility: visible!important;
+    position: relative!important;
+    width: 100%;
+}
+
+.carousel-item-content{
+    position: relative!important;
+    width: 100%!important;
+    margin-top: 5%;
+    bottom: 0px!important;
+    left: 0%!important;
+    right:0%!important;
+}
+
+.texto-carousel{
+    font-family: 'PT Sans', sans-serif;
+}
+
+.bolsa-label{
+    margin-left: 1%;
+}
+
+.trace-bolsa{
+    width: 98%;
 }
