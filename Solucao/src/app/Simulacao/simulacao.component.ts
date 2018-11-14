@@ -9,8 +9,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SimulacaoComponent { 
 
+    labelMeses: string;
+
     constructor(){
         $.getScript('app/Scripts/tabs.min.js');
+        this.labelMeses = '0';
     }
 
     SelecionaInvestimento(tipoInvestimento){
@@ -25,5 +28,9 @@ export class SimulacaoComponent {
         } else if(tipoInvestimento == 'lci_lca'){
             console.log("lci_lca");
         }
+    }
+
+    updateTextInput(event){
+        this.labelMeses = event.target.value; 
     }
 }

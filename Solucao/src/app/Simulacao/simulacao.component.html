@@ -9,23 +9,29 @@
         <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('lci_lca')">LCI e LCA</a></li>
       </ul>
 
-    <div id="simulacao" class="col s12 container">
-        <div class="container">
-        <h5>Valor de investimento</h5>
-        <div class="input-field col s12">
-            <input id="first_name" type="text" class="validate">
-            <label for="first_name">Valor inicial</label>
-        </div>
-        <div class="input-field col s12">
-            <input id="first_name" type="text" class="validate">
-            <label for="first_name">Depósito mensal</label>
-        </div>
-        <form action="#">
-            <h5>Tempo de Investimento</h5>
-            <p class="range-field">
-                <input type="range" id="test5" min="0" max="360"/>
-            </p>
-        </form>     
-    </div>       
+    <div id="simulacao" class="col s12 container box">
+        <div class="container col s6">
+            <h5>Valor de investimento</h5>
+            <div class="input-field col s12">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">Valor inicial</label>
+            </div>
+            <div class="input-field col s12">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">Depósito mensal</label>
+            </div>
+            <div>
+                <form action="#">
+                    <h5>Tempo de Investimento</h5>
+                    <h3 class="meses">{{labelMeses}} Meses</h3>
+                    <p class="range-field">
+                        <input type="range" id="range_input" min="0" max="360"  (change)="updateTextInput($event)"/>
+                    </p>
+                </form>     
+            </div>
+        </div>    
+        <div class="container col s6">
+
+        </div>   
     </div>
 </div>

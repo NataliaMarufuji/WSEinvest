@@ -13,6 +13,7 @@ var core_1 = require("@angular/core");
 var SimulacaoComponent = /** @class */ (function () {
     function SimulacaoComponent() {
         $.getScript('app/Scripts/tabs.min.js');
+        this.labelMeses = '0';
     }
     SimulacaoComponent.prototype.SelecionaInvestimento = function (tipoInvestimento) {
         if (tipoInvestimento == 'prefixado') {
@@ -30,6 +31,9 @@ var SimulacaoComponent = /** @class */ (function () {
         else if (tipoInvestimento == 'lci_lca') {
             console.log("lci_lca");
         }
+    };
+    SimulacaoComponent.prototype.updateTextInput = function (event) {
+        this.labelMeses = event.target.value;
     };
     SimulacaoComponent = __decorate([
         core_1.Component({

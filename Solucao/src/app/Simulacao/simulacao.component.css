@@ -6,6 +6,20 @@
     background-color: #334A66 !important;
 }
 
+/deep/ .thumb{
+    background-color: #334A66!important;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background-color: #334A66 !important;
+  }
+  input[type=range]::-moz-range-thumb {
+    background-color: #334A66 !important;
+  }
+  input[type=range]::-ms-thumb {
+    background-color: #334A66 !important;
+  }
+
 .tabs .tab a{
     color:#334A66;
 } 
@@ -18,4 +32,12 @@
 .tabs .tab a.active {
     background-color:#E7DEC1;
     color:#334A66;
+}
+
+.box{
+    margin-top: 5%;
+}
+
+.meses{
+    color: #A9881C;
 }
