@@ -1,0 +1,21 @@
+.colunas{
+    width: 19%!important;
+}
+
+/deep/ .tabs .indicator {
+    background-color: #334A66 !important;
+}
+
+.tabs .tab a{
+    color:#334A66;
+} 
+
+.tabs .tab a:hover {
+    background-color:#E7DEC1;
+    color:#334A66;
+} 
+
+.tabs .tab a.active {
+    background-color:#E7DEC1;
+    color:#334A66;
+}

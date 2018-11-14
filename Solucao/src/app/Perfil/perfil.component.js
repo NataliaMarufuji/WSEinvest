@@ -21,14 +21,17 @@ var PerfilComponent = /** @class */ (function () {
     PerfilComponent.prototype.mostraPrazo = function () {
         this.mostrarObjetivo = false;
         this.mostrarPrazo = true;
+        $.getScript('app/Scripts/select.min.js');
     };
     PerfilComponent.prototype.mostraRisco = function () {
         this.mostrarRisco = true;
         this.mostrarPrazo = false;
+        $.getScript('app/Scripts/select.min.js');
     };
     PerfilComponent.prototype.mostraRecebimento = function () {
         this.mostrarRisco = false;
         this.mostrarRecebimento = true;
+        $.getScript('app/Scripts/select.min.js');
     };
     PerfilComponent = __decorate([
         core_1.Component({

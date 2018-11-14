@@ -9,6 +9,7 @@ import { ListagemBolsaComponent }  from './ListagemBolsa/listagemBolsa.component
 import { LoginComponent }  from './Login/login.component';
 import { MenuComponent }  from './Menu/menu.component';
 import { MainComponent }  from './Main/main.component';
+import { SimulacaoComponent }  from './Simulacao/simulacao.component';
 import { SimulacaoMenuComponent }  from './SimulacaoMenu/simulacaoMenu.component';
 import { PerfilComponent } from './Perfil/perfil.component';
 
@@ -19,7 +20,7 @@ import { PerfilComponent } from './Perfil/perfil.component';
         HttpModule, 
         routing, 
     ],
-    declarations: [ AppComponent, MenuComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PerfilComponent ],
+    declarations: [ AppComponent, MenuComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PerfilComponent, SimulacaoComponent ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

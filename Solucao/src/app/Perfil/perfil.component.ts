@@ -25,15 +25,18 @@ export class PerfilComponent {
     mostraPrazo(){
         this.mostrarObjetivo = false;
         this.mostrarPrazo = true;
+        $.getScript('app/Scripts/select.min.js');
     }
 
     mostraRisco(){
         this.mostrarRisco = true;
         this.mostrarPrazo = false;
+        $.getScript('app/Scripts/select.min.js');
     }
 
     mostraRecebimento(){
         this.mostrarRisco = false;
         this.mostrarRecebimento = true;
+        $.getScript('app/Scripts/select.min.js');
     }
 }

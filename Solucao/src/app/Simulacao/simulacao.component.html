@@ -1,0 +1,31 @@
+<menu-inicial></menu-inicial>
+
+<div class="row">
+      <ul class="tabs">
+        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('prefixado')">Tesouro Prefixado</a></li>
+        <li class="tab colunas"><a class="active" href="#simulacao" (click)="SelecionaInvestimento('direto')">Tesouro Selic</a></li>
+        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('ipca')">Tesouro IPCA+</a></li>
+        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('cdb_lc')">CDB e LC</a></li>
+        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('lci_lca')">LCI e LCA</a></li>
+      </ul>
+
+    <div id="simulacao" class="col s12 container">
+        <div class="container">
+        <h5>Valor de investimento</h5>
+        <div class="input-field col s12">
+            <input id="first_name" type="text" class="validate">
+            <label for="first_name">Valor inicial</label>
+        </div>
+        <div class="input-field col s12">
+            <input id="first_name" type="text" class="validate">
+            <label for="first_name">Depósito mensal</label>
+        </div>
+        <form action="#">
+            <h5>Tempo de Investimento</h5>
+            <p class="range-field">
+                <input type="range" id="test5" min="0" max="360"/>
+            </p>
+        </form>     
+    </div>       
+    </div>
+</div>
