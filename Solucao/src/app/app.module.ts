@@ -9,6 +9,8 @@ import { ListagemBolsaComponent }  from './ListagemBolsa/listagemBolsa.component
 import { LoginComponent }  from './Login/login.component';
 import { MenuComponent }  from './Menu/menu.component';
 import { MainComponent }  from './Main/main.component';
+import { SimulacaoMenuComponent }  from './SimulacaoMenu/simulacaoMenu.component';
+import { PerfilComponent } from './Perfil/perfil.component';
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import { MainComponent }  from './Main/main.component';
         HttpModule, 
         routing, 
     ],
-    declarations: [ AppComponent, MenuComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent ],
+    declarations: [ AppComponent, MenuComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PerfilComponent ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

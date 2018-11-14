@@ -1,0 +1,88 @@
+<menu-inicial></menu-inicial>
+
+<div class="container">     
+    <nav>
+        <div class="nav-wrapper">
+            <div class="col s12">
+                <a class="breadcrumb">Objetivo</a>
+                <a class="breadcrumb">Prazo</a>
+                <a class="breadcrumb">Risco</a>
+                <a class="breadcrumb">Recebimento</a>
+                <a class="breadcrumb">Resultado</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container" *ngIf="mostrarObjetivo">
+        <h5 class="center">Qual seu objetivo?</h5> 
+        <p>Investir se torna uma tarefa mais fácil quando sabemos onde queremos chegar. Seja uma aposentadoria tranquila, uma viagem, a faculdade dos filhos ou uma reserva de segurança, saber o que você deseja e quando pretende realizá-lo é essencial para planejar seus investimentos.</p>
+        <div class="input-field col s12 select">
+            <select>
+                <option value="" disabled selected>Selecione</option>
+                <option value="1">Aposentadoria</option>
+                <option value="2">Casa</option>
+                <option value="3">Estudos</option>
+                <option value="4">Automóvel</option>
+                <option value="5">Reserva de emergência</option>
+                <option value="6">Férias</option>
+                <option value="7">Outro</option>
+            </select>
+            <label>Selecione seu objetivo</label>
+        </div>
+        <button class="btn card-login right" type="submit"  (click)="mostraPrazo()" name="action">Próximo
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+
+    <div class="container" *ngIf="mostrarPrazo">
+        <h5 class="center">Por quanto tempo você quer manter seu investimento?</h5> 
+        <div class="input-field col s12 select">
+            <select>
+                <option value="" selected>Selecione</option>
+                <option value="1">Curto prazo (sempre disponível para retirada)</option>
+                <option value="2">Médio prazo (entre 3 e 9 anos)</option>
+                <option value="3">Longo prazo (10 anos ou mais)</option>
+                <option value="4">Não sei</option>
+            </select>
+            <label>Selecione o prazo desejado</label>
+        </div>
+        <button class="btn card-login right" type="submit" (click)="mostraRisco()" name="action">Próximo
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+
+    <div class="container" *ngIf="mostrarRisco">
+        <h5 class="center">Qual o nível de risco de um investimento é confortável pra você?</h5> 
+        <div class="input-field col s12 select">
+            <select>
+                <option value="" selected>Selecione</option>
+                <option value="1">Prefiro investimento sem risco</option>
+                <option value="2">Um pouco de risco é bom</option>
+                <option value="3">Arriscar me traz mais oportunidades!</option>
+                <option value="4">Não sei</option>
+            </select>
+            <label>Selecione o nível de risco</label>
+        </div>
+        <button class="btn card-login right" type="submit" (click)="mostraRecebimento()" name="action">Próximo
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+
+    <div class="container" *ngIf="mostrarRecebimento">
+        <h5 class="center">Como prefere receber seu rendimento?</h5> 
+        <div class="input-field col s12 select">
+            <select>
+                <option value="" selected>Selecione</option>
+                <option value="1">De uma vez só ao final do período de investimento</option>
+                <option value="2">Semestralmente</option>
+                <option value="4">Não sei</option>
+            </select>
+            <label>Selecione o nível de risco</label>
+        </div>
+        <button class="btn card-login right" type="submit" (click)="mostraRecebimento()" name="action">Próximo
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+
+</div>

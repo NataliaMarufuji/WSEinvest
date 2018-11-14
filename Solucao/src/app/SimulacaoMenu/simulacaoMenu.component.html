@@ -1,0 +1,37 @@
+<menu-inicial></menu-inicial>
+
+<div class="row">
+    <div class="card content">
+    <div class="card-content white-text conteudo-texto">
+        <span class="card-title titulo">Simule seu investimento</span>
+        <p class="subtitulo">Quer conhecer o seu perfil de investidor? Faça o teste!</p>
+    </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m7">
+        <div class="card medium" (click)="mostrarPerfil()" [routerLink]="['/perfil-investidor']">
+            <div class="card-image">
+                <img src="img/perfil.jpg">
+                <span class="card-title perfil-simulacao-content">Descobrir perfil</span>
+            </div>
+            <div class="card-content">
+                <p>Descubra seu perfil de investidor e passe a realizar os investimentos certos para você!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col s12 m7">
+        <div class="card medium">
+            <div class="card-image">
+                <img src="img/simulacao.jpg">
+                <span class="card-title perfil-simulacao-content">Simular investimento</span>
+            </div>
+            <div class="card-content">
+                <p>Cansado de surpresas do retorno de seus investimentos?
+                    Simule seus investimentos e veja os resultados.</p>
+            </div>
+        </div>
+    </div>
+</div>

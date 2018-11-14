@@ -17,6 +17,8 @@ var listagemBolsa_component_1 = require("./ListagemBolsa/listagemBolsa.component
 var login_component_1 = require("./Login/login.component");
 var menu_component_1 = require("./Menu/menu.component");
 var main_component_1 = require("./Main/main.component");
+var simulacaoMenu_component_1 = require("./SimulacaoMenu/simulacaoMenu.component");
+var perfil_component_1 = require("./Perfil/perfil.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -27,7 +29,7 @@ var AppModule = /** @class */ (function () {
                 http_1.HttpModule,
                 app_routes_1.routing,
             ],
-            declarations: [app_component_1.AppComponent, menu_component_1.MenuComponent, main_component_1.MainComponent, listagemBolsa_component_1.ListagemBolsaComponent, login_component_1.LoginComponent, cadastroUsuario_component_1.CadastroUsuarioComponent],
+            declarations: [app_component_1.AppComponent, menu_component_1.MenuComponent, main_component_1.MainComponent, listagemBolsa_component_1.ListagemBolsaComponent, login_component_1.LoginComponent, cadastroUsuario_component_1.CadastroUsuarioComponent, simulacaoMenu_component_1.SimulacaoMenuComponent, perfil_component_1.PerfilComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
