@@ -19,6 +19,7 @@ var menu_component_1 = require("./Menu/menu.component");
 var main_component_1 = require("./Main/main.component");
 var simulacao_component_1 = require("./Simulacao/simulacao.component");
 var simulacaoMenu_component_1 = require("./SimulacaoMenu/simulacaoMenu.component");
+var passos_component_1 = require("./Passos/passos.component");
 var perfil_component_1 = require("./Perfil/perfil.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -30,7 +31,7 @@ var AppModule = /** @class */ (function () {
                 http_1.HttpModule,
                 app_routes_1.routing,
             ],
-            declarations: [app_component_1.AppComponent, menu_component_1.MenuComponent, main_component_1.MainComponent, listagemBolsa_component_1.ListagemBolsaComponent, login_component_1.LoginComponent, cadastroUsuario_component_1.CadastroUsuarioComponent, simulacaoMenu_component_1.SimulacaoMenuComponent, perfil_component_1.PerfilComponent, simulacao_component_1.SimulacaoComponent],
+            declarations: [app_component_1.AppComponent, menu_component_1.MenuComponent, main_component_1.MainComponent, listagemBolsa_component_1.ListagemBolsaComponent, login_component_1.LoginComponent, cadastroUsuario_component_1.CadastroUsuarioComponent, simulacaoMenu_component_1.SimulacaoMenuComponent, passos_component_1.PassosComponent, perfil_component_1.PerfilComponent, simulacao_component_1.SimulacaoComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

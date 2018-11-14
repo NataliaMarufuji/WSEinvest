@@ -1,18 +1,18 @@
   <nav>
-        <div class="nav-wrapper menu">
-          <a href="#" class="brand-logo"><img class="logo" src="/img/logo_wse_1.png" alt="WSE logo" /></a>
-          <ul id="nav-mobile" class="menu-links hide-on-med-and-down">
-              <div class="flex-container">
-                <li><a  href="sass.html">Investimentos</a></li>
-                <li><a href="badges.html">Ações</a></li>
-                <li><a [routerLink]="['/simulacao-investimento']">Simule</a></li>
-                <li><a href="collapsible.html">Ajuda</a></li>
-                <div *ngIf="!loginOuCadastro">
-                  <li><a [routerLink]="['/login']" class="main-buttons signin-btn waves-effect waves-light btn">Login</a></li>
-                  <li><a [routerLink]="['/cadastro-de-usuario']" class="main-buttons signup-btn waves-effect waves-light btn">Cadastre-se</a></li>
-              </div>
-            </div>
-            </ul>
+    <div class="nav-wrapper menu">
+      <a href="#" class="brand-logo"><img class="logo" src="/img/logo_wse_1.png" alt="WSE logo" /></a>
+      <ul id="nav-mobile" class="menu-links hide-on-med-and-down">
+          <div class="flex-container">
+            <li><a  href="sass.html">Investimentos</a></li>
+            <li><a href="badges.html">Ações</a></li>
+            <li><a [routerLink]="['/simulacao-investimento']">Simule</a></li>
+            <li><a [routerLink]="['/primeiros-passos']">Primeiros passos</a></li>
+            <div *ngIf="!loginOuCadastro">
+              <li><a [routerLink]="['/login']" class="main-buttons signin-btn waves-effect waves-light btn">Login</a></li>
+              <li><a [routerLink]="['/cadastro-de-usuario']" class="main-buttons signup-btn waves-effect waves-light btn">Cadastre-se</a></li>
+          </div>
         </div>
-      </nav>
+        </ul>
+    </div>
+  </nav>
             

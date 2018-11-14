@@ -5,6 +5,7 @@ import { LoginComponent }  from './Login/login.component';
 import { CadastroUsuarioComponent }  from './CadastroUsuario/cadastroUsuario.component';
 import { SimulacaoComponent }  from './Simulacao/simulacao.component';
 import { SimulacaoMenuComponent }  from './SimulacaoMenu/simulacaoMenu.component';
+import { PassosComponent } from './Passos/passos.component';
 import { PerfilComponent } from './Perfil/perfil.component';
 
 const appRoutes: Routes = [
@@ -14,7 +15,8 @@ const appRoutes: Routes = [
    { path: 'cadastro-de-usuario', component: CadastroUsuarioComponent},
    { path: 'simulacao-investimento', component: SimulacaoMenuComponent},
    { path: 'perfil-investidor', component: PerfilComponent},
-   { path: 'simulacao', component: SimulacaoComponent }
+   { path: 'simulacao', component: SimulacaoComponent },
+   { path: 'primeiros-passos', component: PassosComponent}
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

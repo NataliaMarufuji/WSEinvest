@@ -13,7 +13,7 @@ var core_1 = require("@angular/core");
 var SimulacaoComponent = /** @class */ (function () {
     function SimulacaoComponent() {
         $.getScript('app/Scripts/tabs.min.js');
-        this.labelMeses = '0';
+        this.labelMeses = '180';
     }
     SimulacaoComponent.prototype.SelecionaInvestimento = function (tipoInvestimento) {
         if (tipoInvestimento == 'prefixado') {

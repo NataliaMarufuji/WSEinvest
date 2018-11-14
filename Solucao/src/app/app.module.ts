@@ -11,6 +11,7 @@ import { MenuComponent }  from './Menu/menu.component';
 import { MainComponent }  from './Main/main.component';
 import { SimulacaoComponent }  from './Simulacao/simulacao.component';
 import { SimulacaoMenuComponent }  from './SimulacaoMenu/simulacaoMenu.component';
+import { PassosComponent } from './Passos/passos.component';
 import { PerfilComponent } from './Perfil/perfil.component';
 
 
@@ -20,7 +21,7 @@ import { PerfilComponent } from './Perfil/perfil.component';
         HttpModule, 
         routing, 
     ],
-    declarations: [ AppComponent, MenuComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PerfilComponent, SimulacaoComponent ],
+    declarations: [ AppComponent, MenuComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PassosComponent, PerfilComponent, SimulacaoComponent ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

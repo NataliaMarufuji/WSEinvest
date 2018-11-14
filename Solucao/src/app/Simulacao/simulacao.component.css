@@ -2,6 +2,10 @@
     width: 19%!important;
 }
 
+.box_row{
+    align-items: center;
+}
+
 /deep/ .tabs .indicator {
     background-color: #334A66 !important;
 }
@@ -40,4 +44,13 @@ input[type=range]::-webkit-slider-thumb {
 
 .meses{
     color: #A9881C;
+}
+
+.input-field input[type=text]:focus + label {
+    color: #334A66;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #334A66;
+    box-shadow: 0 1px 0 0 #334A66;
 }

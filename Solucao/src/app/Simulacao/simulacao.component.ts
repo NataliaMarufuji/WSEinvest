@@ -13,7 +13,7 @@ export class SimulacaoComponent {
 
     constructor(){
         $.getScript('app/Scripts/tabs.min.js');
-        this.labelMeses = '0';
+        this.labelMeses = '180';
     }
 
     SelecionaInvestimento(tipoInvestimento){
