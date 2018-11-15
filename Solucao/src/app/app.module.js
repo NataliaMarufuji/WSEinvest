@@ -13,6 +13,7 @@ var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
 var app_routes_1 = require("./app.routes");
 var cadastroUsuario_component_1 = require("./CadastroUsuario/cadastroUsuario.component");
+var investimentos_component_1 = require("./Investimentos/investimentos.component");
 var listagemBolsa_component_1 = require("./ListagemBolsa/listagemBolsa.component");
 var login_component_1 = require("./Login/login.component");
 var menu_component_1 = require("./Menu/menu.component");
@@ -31,7 +32,7 @@ var AppModule = /** @class */ (function () {
                 http_1.HttpModule,
                 app_routes_1.routing,
             ],
-            declarations: [app_component_1.AppComponent, menu_component_1.MenuComponent, main_component_1.MainComponent, listagemBolsa_component_1.ListagemBolsaComponent, login_component_1.LoginComponent, cadastroUsuario_component_1.CadastroUsuarioComponent, simulacaoMenu_component_1.SimulacaoMenuComponent, passos_component_1.PassosComponent, perfil_component_1.PerfilComponent, simulacao_component_1.SimulacaoComponent],
+            declarations: [app_component_1.AppComponent, menu_component_1.MenuComponent, main_component_1.MainComponent, listagemBolsa_component_1.ListagemBolsaComponent, login_component_1.LoginComponent, cadastroUsuario_component_1.CadastroUsuarioComponent, simulacaoMenu_component_1.SimulacaoMenuComponent, passos_component_1.PassosComponent, perfil_component_1.PerfilComponent, simulacao_component_1.SimulacaoComponent, investimentos_component_1.InvestimentosComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

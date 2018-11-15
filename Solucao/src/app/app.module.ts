@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { routing }  from './app.routes';
 import { CadastroUsuarioComponent }  from './CadastroUsuario/cadastroUsuario.component';
+import { InvestimentosComponent }  from './Investimentos/investimentos.component';
 import { ListagemBolsaComponent }  from './ListagemBolsa/listagemBolsa.component';
 import { LoginComponent }  from './Login/login.component';
 import { MenuComponent }  from './Menu/menu.component';
@@ -21,7 +22,7 @@ import { PerfilComponent } from './Perfil/perfil.component';
         HttpModule, 
         routing, 
     ],
-    declarations: [ AppComponent, MenuComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PassosComponent, PerfilComponent, SimulacaoComponent ],
+    declarations: [ AppComponent, MenuComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PassosComponent, PerfilComponent, SimulacaoComponent, InvestimentosComponent ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }
