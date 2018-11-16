@@ -10,7 +10,5 @@
 </div>
 
 <div class="row">
-    <div class="col m6" *ngFor="let investimento of investimentos">
-        <investimento [nome]="investimento?.nome" [descricao]="investimento?.descricao"></investimento>
-    </div>
+<investimento class="col-md-6" *ngFor="let investimento of investimentos" [nome]="investimento?.nome" [descricao]="investimento?.descricao"></investimento>
 </div>

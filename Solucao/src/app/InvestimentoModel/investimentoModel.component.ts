@@ -11,5 +11,5 @@ export class InvestimentoModelComponent {
     
     @Input() nome:string;
     @Input() descricao:string;
-
+    @Input() number:number;
 }

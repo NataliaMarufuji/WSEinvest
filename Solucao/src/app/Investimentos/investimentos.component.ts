@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MenuComponent } from '../Menu/menu.component';
 import { InvestimentoModelService } from '../InvestimentoModel/investimentoModel.service';
 import { InvestimentoModelComponent } from '../InvestimentoModel/investimentoModel.component';
+import { PainelComponent }  from '../Painel/painel.component';
 
 @Component({
     moduleId: module.id,
