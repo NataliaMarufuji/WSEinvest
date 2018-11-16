@@ -1,0 +1,33 @@
+[{
+    "nome": "Tesouro Direto",
+    "descricao": "Porta de entrada do mundo dos investimentos. Possui modalidades  prefixadas e pós-fixadas. Ideal para quem quer começar."
+},
+{
+    "nome": "Tesouro SELIC",
+    "descricao": "É o investimento mais escolhido para aplicações de curto prazo por sofrer menor volatilidade"
+},
+{
+    "nome": "Tesouro IPCA+",
+    "descricao": "É uma família de títulos de renda fixa que paga um juro anual acrescido da variação da inflação oficial do país.Com ele, ao manter o investimento até o prazo de vencimentos, você tem  a certeza do rendimento real"
+},
+{
+    "nome": "CDB",
+    "descricao": "CDB é um investimento em Renda Fixa com boa rentabilidade e muitas opções de prazo de resgate para sua estratégia de investimento."
+},
+{
+    "nome": "LC",
+    "descricao": "LC é um investimento em Renda Fixa com boa rentabilidade e muitas opções de prazo de resgate para sua estratégia de investimento."
+},
+{
+    "nome": "LCI",
+    "descricao": "LCI é um investimento da Renda Fixa, com boa rentabilidade ao médio prazo."
+},
+{
+    "nome": "LCA",
+    "descricao": "LCA é um investimento da Renda Fixa, com boa rentabilidade ao médio prazo."
+},
+{
+    "nome": "Mercado de ações",
+    "descricao": "Ações são os investimentos mais famosos do mercado financeiro. São mais simples de operar do que parecem."
+}
+]

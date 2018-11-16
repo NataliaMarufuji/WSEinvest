@@ -10,21 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var MainComponent = /** @class */ (function () {
-    function MainComponent() {
-        $.getScript('app/Scripts/carousel.min.js');
-        $.getScript('app/Scripts/dropdown-menu.min.js');
+var InvestimentoModelComponent = /** @class */ (function () {
+    function InvestimentoModelComponent() {
     }
-    MainComponent = __decorate([
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], InvestimentoModelComponent.prototype, "nome", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], InvestimentoModelComponent.prototype, "descricao", void 0);
+    InvestimentoModelComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'main',
-            templateUrl: './main.component.html',
-            styleUrls: ['./main.component.css']
-        }),
-        __metadata("design:paramtypes", [])
-    ], MainComponent);
-    return MainComponent;
+            selector: 'investimento',
+            templateUrl: './investimentoModel.component.html',
+            styleUrls: ['./investimentoModel.component.css']
+        })
+    ], InvestimentoModelComponent);
+    return InvestimentoModelComponent;
 }());
-exports.MainComponent = MainComponent;
-//# sourceMappingURL=main.component.js.map
+exports.InvestimentoModelComponent = InvestimentoModelComponent;
+//# sourceMappingURL=investimentoModel.component.js.map

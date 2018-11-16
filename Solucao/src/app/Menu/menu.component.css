@@ -21,6 +21,11 @@
     font-size: 1rem!important;
 }
 
+.dropdown-content{
+    margin-top: 5%!important;
+    width: 20em!important;
+}
+
 .signin-btn{
     border-color: #A9881C;
     background-color: #1F3857;
@@ -36,6 +41,10 @@
 .flex-container{
     display: flex;
     justify-content: space-between;
+}
+
+.hover-nav-finance{
+    font-size: 1.0rem!important;
 }
 
 

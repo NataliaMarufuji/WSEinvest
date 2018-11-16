@@ -13,5 +13,6 @@ export class MainComponent {
 
     constructor(){
        $.getScript('app/Scripts/carousel.min.js');
+       $.getScript('app/Scripts/dropdown-menu.min.js');
     }
 }

@@ -3,10 +3,28 @@
       <a href="#" class="brand-logo"><img class="logo" src="/img/logo_wse_1.png" alt="WSE logo" /></a>
       <ul id="nav-mobile" class="menu-links hide-on-med-and-down">
           <div class="flex-container">
-            <li><a [routerLink]="['/investimentos']" >Investimentos</a></li>
+            <li><a [routerLink]="['/investimentos']"  class='dropdown-button' href='#' data-activates='investimento'>Investimentos</a></li>
             <li><a href="badges.html">Ações</a></li>
-            <li><a [routerLink]="['/simulacao-investimento']">Simule</a></li>
+            <li><a [routerLink]="['/simulacao-investimento']" class='dropdown-button' href='#' data-activates='simulacao'>Simule</a></li>
             <li><a [routerLink]="['/primeiros-passos']">Primeiros passos</a></li>
+
+            <ul id="investimento" class="dropdown-content">
+                <li><a [routerLink]="['/simulacao']" class="hover-nav-finance" id="camp-dates">Tesouro direto</a></li>
+                <li><a [routerLink]="['/perfil-investidor']"class="hover-nav-finance" id="prices">Tesouro SELIC</a></li>
+                <li><a [routerLink]="['/simulacao']" class="hover-nav-finance" id="camp-dates">Tesouro IPCA+</a></li>
+                <li><a [routerLink]="['/perfil-investidor']"class="hover-nav-finance" id="prices">CDB</a></li>
+                <li><a [routerLink]="['/simulacao']" class="hover-nav-finance" id="camp-dates">LC</a></li>
+                <li><a [routerLink]="['/perfil-investidor']"class="hover-nav-finance" id="prices">LCI</a></li>
+                <li><a [routerLink]="['/simulacao']" class="hover-nav-finance" id="camp-dates">LCA</a></li>
+                <li><a [routerLink]="['/perfil-investidor']"class="hover-nav-finance" id="prices">Mercado de Ações</a></li>
+            </ul>
+            
+            <ul id="simulacao" class="dropdown-content">
+                <li><a [routerLink]="['/simulacao']" class="hover-nav-finance" id="camp-dates">Descobrir perfil</a></li>
+                <li><a [routerLink]="['/perfil-investidor']"class="hover-nav-finance" id="prices">Simular investimento</a></li>
+            </ul>
+
+
             <div *ngIf="!loginOuCadastro">
               <li><a [routerLink]="['/login']" class="main-buttons signin-btn waves-effect waves-light btn">Login</a></li>
               <li><a [routerLink]="['/cadastro-de-usuario']" class="main-buttons signup-btn waves-effect waves-light btn">Cadastre-se</a></li>
