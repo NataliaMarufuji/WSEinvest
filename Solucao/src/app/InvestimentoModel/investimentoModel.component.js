@@ -23,8 +23,16 @@ var InvestimentoModelComponent = /** @class */ (function () {
     ], InvestimentoModelComponent.prototype, "descricao", void 0);
     __decorate([
         core_1.Input(),
-        __metadata("design:type", Number)
-    ], InvestimentoModelComponent.prototype, "number", void 0);
+        __metadata("design:type", Boolean)
+    ], InvestimentoModelComponent.prototype, "investimentoEspecifico", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], InvestimentoModelComponent.prototype, "definicao", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], InvestimentoModelComponent.prototype, "funcionamento", void 0);
     InvestimentoModelComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

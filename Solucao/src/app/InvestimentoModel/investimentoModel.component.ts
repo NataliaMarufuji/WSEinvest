@@ -11,5 +11,7 @@ export class InvestimentoModelComponent {
     
     @Input() nome:string;
     @Input() descricao:string;
-    @Input() number:number;
+    @Input() investimentoEspecifico:boolean;
+    @Input() definicao: string;
+    @Input() funcionamento: string;
 }

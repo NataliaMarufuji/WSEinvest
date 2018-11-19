@@ -1,33 +1,57 @@
 [{
     "nome": "Tesouro Direto",
-    "descricao": "Porta de entrada do mundo dos investimentos. Possui modalidades  prefixadas e pós-fixadas. Ideal para quem quer começar."
+    "descricao": "Porta de entrada do mundo dos investimentos. Possui modalidades  prefixadas e pós-fixadas. Ideal para quem quer começar.",
+    "tipoInvestimento": "tesouro-direto",
+    "definicao": "Considerado a porta de entrada para o mundo dos investimentos, no Tesouro Direto você investe com pouco dinheiro e com o menor risco entre as aplicações do mercado. Ideal para quem quer começar a investir.",
+    "funcionamento": "Investir no tesouro direto é uma maneira acessível para fazer seu dinheiro render mais. Nele você investe em títulos públicos com rentabilidade variável dependendo do tipo de tesouro escolhido. Saiba mais vendo nosso vídeo."
 },
 {
     "nome": "Tesouro SELIC",
-    "descricao": "É o investimento mais escolhido para aplicações de curto prazo por sofrer menor volatilidade"
+    "descricao": "É o investimento mais escolhido para aplicações de curto prazo por sofrer menor volatilidade",
+    "tipoInvestimento": "tesouro-selic",
+    "definicao": "",
+    "funcionamento": ""
 },
 {
     "nome": "Tesouro IPCA+",
-    "descricao": "É uma família de títulos de renda fixa que paga um juro anual acrescido da variação da inflação oficial do país.Com ele, ao manter o investimento até o prazo de vencimentos, você tem  a certeza do rendimento real"
+    "descricao": "É uma família de títulos de renda fixa que paga um juro anual acrescido da variação da inflação oficial do país.Com ele, ao manter o investimento até o prazo de vencimentos, você tem  a certeza do rendimento real",
+    "tipoInvestimento": "tesouro-ipca",
+    "definicao": "",
+    "funcionamento": ""
 },
 {
     "nome": "CDB",
-    "descricao": "CDB é um investimento em Renda Fixa com boa rentabilidade e muitas opções de prazo de resgate para sua estratégia de investimento."
+    "descricao": "CDB é um investimento em Renda Fixa com boa rentabilidade e muitas opções de prazo de resgate para sua estratégia de investimento.",
+    "tipoInvestimento": "cdb",
+    "definicao": "Considerado investimento de Renda Fixa com baixo risco, o CDB (Certificado de Depósito Bancário) é um título emitido para que bancos e instituições financeiras consigam financiar suas atividades de crédito. Ideal para qualquer perfil de investidor.",
+    "funcionamento": ""
 },
 {
     "nome": "LC",
-    "descricao": "LC é um investimento em Renda Fixa com boa rentabilidade e muitas opções de prazo de resgate para sua estratégia de investimento."
+    "descricao": "LC é um investimento em Renda Fixa com boa rentabilidade e muitas opções de prazo de resgate para sua estratégia de investimento.",
+    "tipoInvestimento": "lc",
+    "definicao": "Considerado investimento de Renda Fixa com baixo risco, o LC (Letras de Câmbio)  é um título emitido para que bancos e instituições financeiras consigam financiar suas atividades de crédito. Ideal para qualquer perfil de investidor.",
+    "funcionamento": ""
 },
 {
     "nome": "LCI",
-    "descricao": "LCI é um investimento da Renda Fixa, com boa rentabilidade ao médio prazo."
+    "descricao": "LCI é um investimento da Renda Fixa, com boa rentabilidade ao médio prazo.",
+    "tipoInvestimento": "lci",
+    "definicao": "Considerado investimento de baixo risco, LCI (Letra de Crédito Imobiliário) é emitida por instituições financeiras. Com o objetivo de captar recursos para os setores imobiliário e agronegócio, respectivamente.",
+    "funcionamento": "É um tipo de investimento em Renda Fixa de curto prazo e isento de Imposto de Renda, que dá ao investidor duas opções: saber na hora da compra quanto seu dinheiro vai render ou optar por acompanhar as taxas de juros do mercado."
 },
 {
     "nome": "LCA",
-    "descricao": "LCA é um investimento da Renda Fixa, com boa rentabilidade ao médio prazo."
+    "descricao": "LCA é um investimento da Renda Fixa, com boa rentabilidade ao médio prazo.",
+    "tipoInvestimento": "lca",
+    "definicao": "Considerado investimento de baixo risco, LCA (Letra de Crédito do Agronegócio) é emitida por instituições financeiras. Com o objetivo de captar recursos para os setores imobiliário e agronegócio, respectivamente.",
+    "funcionamento": "É um tipo de investimento em Renda Fixa de curto prazo e isento de Imposto de Renda, que dá ao investidor duas opções: saber na hora da compra quanto seu dinheiro vai render ou optar por acompanhar as taxas de juros do mercado."
 },
 {
     "nome": "Mercado de ações",
-    "descricao": "Ações são os investimentos mais famosos do mercado financeiro. São mais simples de operar do que parecem."
+    "descricao": "Ações são os investimentos mais famosos do mercado financeiro. São mais simples de operar do que parecem.",
+    "tipoInvestimento": "mercado-acoes",
+    "definicao": "Ações são títulos que representam um pedaço de uma empresa. Comprando uma ação, você se torna um sócio da empresa, tendo participação nos lucros da mesma. Podem ser compradas e vendidas na bolsa de valores através de um home broker, assim como nós da Wse.",
+    "funcionamento": "O valor de compra e venda das ações são determinados pelo mercado. Fatores como a gestão da empresa que emitiu esses títulos ou mesmo as condições gerais da economia afetam as ações, tanto para mais como para menos."
 }
 ]

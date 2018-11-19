@@ -9,6 +9,7 @@ var simulacao_component_1 = require("./Simulacao/simulacao.component");
 var simulacaoMenu_component_1 = require("./SimulacaoMenu/simulacaoMenu.component");
 var passos_component_1 = require("./Passos/passos.component");
 var perfil_component_1 = require("./Perfil/perfil.component");
+var investimentoEspecifico_component_1 = require("./InvestimentoEspecifico/investimentoEspecifico.component");
 var appRoutes = [
     { path: '', component: main_component_1.MainComponent },
     { path: 'login', component: login_component_1.LoginComponent },
@@ -17,7 +18,8 @@ var appRoutes = [
     { path: 'perfil-investidor', component: perfil_component_1.PerfilComponent },
     { path: 'simulacao', component: simulacao_component_1.SimulacaoComponent },
     { path: 'primeiros-passos', component: passos_component_1.PassosComponent },
-    { path: 'investimentos', component: investimentos_component_1.InvestimentosComponent }
+    { path: 'investimentos', component: investimentos_component_1.InvestimentosComponent },
+    { path: 'investimento/:tipoInvestimento', component: investimentoEspecifico_component_1.InvestimentoEspecificoComponent }
 ];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);
 //# sourceMappingURL=app.routes.js.map

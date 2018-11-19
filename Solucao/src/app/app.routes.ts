@@ -8,6 +8,7 @@ import { SimulacaoComponent }  from './Simulacao/simulacao.component';
 import { SimulacaoMenuComponent }  from './SimulacaoMenu/simulacaoMenu.component';
 import { PassosComponent } from './Passos/passos.component';
 import { PerfilComponent } from './Perfil/perfil.component';
+import { InvestimentoEspecificoComponent } from './InvestimentoEspecifico/investimentoEspecifico.component';
 
 const appRoutes: Routes = [
 
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
    { path: 'perfil-investidor', component: PerfilComponent},
    { path: 'simulacao', component: SimulacaoComponent },
    { path: 'primeiros-passos', component: PassosComponent},
-   { path: 'investimentos', component: InvestimentosComponent}
+   { path: 'investimentos', component: InvestimentosComponent},
+   { path: 'investimento/:tipoInvestimento', component: InvestimentoEspecificoComponent}
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

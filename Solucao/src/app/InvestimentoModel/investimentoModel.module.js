@@ -9,11 +9,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var investimentoModel_component_1 = require("./investimentoModel.component");
 var investimentoModel_service_1 = require("./investimentoModel.service");
+var common_1 = require("@angular/common");
 var InvestimentoModelModule = /** @class */ (function () {
     function InvestimentoModelModule() {
     }
     InvestimentoModelModule = __decorate([
         core_1.NgModule({
+            imports: [common_1.CommonModule],
             declarations: [investimentoModel_component_1.InvestimentoModelComponent],
             exports: [investimentoModel_component_1.InvestimentoModelComponent],
             providers: [investimentoModel_service_1.InvestimentoModelService]

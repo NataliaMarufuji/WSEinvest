@@ -13,8 +13,11 @@ import { MenuComponent }  from './Menu/menu.component';
 import { MainComponent }  from './Main/main.component';
 import { SimulacaoComponent }  from './Simulacao/simulacao.component';
 import { SimulacaoMenuComponent }  from './SimulacaoMenu/simulacaoMenu.component';
+import { PainelComponent } from './Painel/painel.component';
 import { PassosComponent } from './Passos/passos.component';
 import { PerfilComponent } from './Perfil/perfil.component';
+import { InvestimentoEspecificoComponent } from './InvestimentoEspecifico/investimentoEspecifico.component';
+
 
 
 @NgModule({
@@ -24,7 +27,7 @@ import { PerfilComponent } from './Perfil/perfil.component';
         routing, 
         InvestimentoModelModule
     ],
-    declarations: [ AppComponent, MenuComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PassosComponent, PerfilComponent, SimulacaoComponent, InvestimentosComponent ],
+    declarations: [ AppComponent, MenuComponent,PainelComponent,  InvestimentoEspecificoComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PassosComponent, PerfilComponent, SimulacaoComponent, InvestimentosComponent ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

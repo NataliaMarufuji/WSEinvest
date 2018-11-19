@@ -5,3 +5,24 @@
 .link-card{
     color: #A9881C!important;
 }
+
+.content{
+    height: 20em;
+    margin-top: 0!important;
+    width: 100%;
+    background-color: #334A66;
+}
+
+.titulo{
+    font-size: 32px!important;
+    margin-left: 30%;
+}
+
+.subtitulo{
+    font-size: 18px!important;
+    margin-left: 5%!important;
+}
+
+.conteudo-texto{
+    margin-top: 5%!important;
+}
