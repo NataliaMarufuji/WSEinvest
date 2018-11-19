@@ -35,22 +35,24 @@
                             <div class="collapsible-header">Tipos de investimentos</div>
                             <div class="collapsible-body">
                                 <div class="collection">
-                                    <a href="#!" class="collection-item">Tesouro prefixado</a>
-                                    <a href="#!" class="collection-item active">Tesouro SELIC</a>
-                                    <a href="#!" class="collection-item">Tesouro IPCA+</a>
-                                    <a href="#!" class="collection-item">CDB e LC</a>
-                                    <a href="#!" class="collection-item">LCI e LCA</a>
-                                    <a href="#!" class="collection-item">Mercado de Ações</a>
+                                    <a [routerLink]="['/investimento', 'tesouro-direto']" class="collection-item">Tesouro prefixado</a>
+                                    <a [routerLink]="['/investimento', 'tesouro-selic']" class="collection-item">Tesouro SELIC</a>
+                                    <a [routerLink]="['/investimento', 'tesouro-ipca']" class="collection-item">Tesouro IPCA+</a>
+                                    <a [routerLink]="['/investimento', 'cdb']" class="collection-item">CDB</a>
+                                    <a [routerLink]="['/investimento', 'lc']" class="collection-item">LC</a>
+                                    <a [routerLink]="['/investimento', 'lci']" class="collection-item">LCI</a>
+                                    <a [routerLink]="['/investimento', 'lca']" class="collection-item">LCA</a>
+                                    <a [routerLink]="['/investimento', 'mercado-acoes']" class="collection-item">Mercado de Ações</a>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="collapsible-header">Quais são os custos?</div>
-                            <div class="collapsible-body"><span>Muitos dos investimentos não geram nenhum custo, para saber de mais detalhes clique aqui</span></div>
+                            <div class="collapsible-body"><span>Muitos dos investimentos não geram nenhum custo, para saber de mais detalhes<a [routerLink]="['/investimentos']"> clique aqui</a></span></div>
                         </li>
                         <li>
                             <div class="collapsible-header">Quais são os riscos?</div>
-                            <div class="collapsible-body"><span>Os riscos variam de acordo com o investimeno realizado, quanto maior o risco maior a possibilidade de retorno poré podem existir perdas. Para saber mais clique aqui.</span></div>
+                            <div class="collapsible-body"><span>Os riscos variam de acordo com o investimeno realizado, quanto maior o risco maior a possibilidade de retorno poré podem existir perdas. Para saber mais<a [routerLink]="['/investimentos']"> clique aqui</a></span></div>
                         </li>
                     </ul>
                 </div>
@@ -64,7 +66,7 @@
         <ul class="collapsible">
             <li>
                 <div class="collapsible-header"><img src="img/three.png"><label class="label-box-passos"> Se cadastre</label></div>
-                <div class="collapsible-body"><span>Se cadastre no nosso site, é gratuito e poderemos te ajudar durante todo o processo!</span></div>
+                <div class="collapsible-body"><span>Se cadastre no nosso site, é gratuito e poderemos te ajudar durante todo o processo! <a [routerLink]="['/cadastro-de-usuario']"> Clique aqui para se cadastrar</a></span></div>
             </li>
         </ul>
     </div>

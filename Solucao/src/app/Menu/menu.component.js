@@ -13,6 +13,7 @@ var core_1 = require("@angular/core");
 var MenuComponent = /** @class */ (function () {
     function MenuComponent() {
         this.loginOuCadastro = false;
+        $.getScript('app/Scripts/dropdown-menu.min.js');
     }
     __decorate([
         core_1.Input(),
@@ -24,7 +25,8 @@ var MenuComponent = /** @class */ (function () {
             selector: 'menu-inicial',
             templateUrl: './menu.component.html',
             styleUrls: ['./menu.component.css']
-        })
+        }),
+        __metadata("design:paramtypes", [])
     ], MenuComponent);
     return MenuComponent;
 }());

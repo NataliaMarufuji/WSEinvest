@@ -9,4 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MenuComponent { 
     @Input() loginOuCadastro = false;
+
+    constructor(){
+       $.getScript('app/Scripts/dropdown-menu.min.js');
+    }
 }

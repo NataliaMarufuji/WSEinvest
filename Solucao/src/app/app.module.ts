@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { routing }  from './app.routes';
 import { CadastroUsuarioComponent }  from './CadastroUsuario/cadastroUsuario.component';
+import { CaracteristicasInvestimentoComponent }  from './CaracteristicasInvestimento/caracteristicas.component';
 import { InvestimentoModelModule }  from './InvestimentoModel/investimentoModel.module';
 import { InvestimentosComponent }  from './Investimentos/investimentos.component';
 import { ListagemBolsaComponent }  from './ListagemBolsa/listagemBolsa.component';
@@ -27,7 +28,7 @@ import { InvestimentoEspecificoComponent } from './InvestimentoEspecifico/invest
         routing, 
         InvestimentoModelModule
     ],
-    declarations: [ AppComponent, MenuComponent,PainelComponent,  InvestimentoEspecificoComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PassosComponent, PerfilComponent, SimulacaoComponent, InvestimentosComponent ],
+    declarations: [ AppComponent, CaracteristicasInvestimentoComponent, MenuComponent,PainelComponent,  InvestimentoEspecificoComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PassosComponent, PerfilComponent, SimulacaoComponent, InvestimentosComponent ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

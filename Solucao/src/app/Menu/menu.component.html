@@ -9,14 +9,14 @@
             <li><a [routerLink]="['/primeiros-passos']">Primeiros passos</a></li>
 
             <ul id="investimento" class="dropdown-content">
-                <li><a [routerLink]="['/simulacao']" class="hover-nav-finance" id="camp-dates">Tesouro direto</a></li>
-                <li><a [routerLink]="['/perfil-investidor']"class="hover-nav-finance" id="prices">Tesouro SELIC</a></li>
-                <li><a [routerLink]="['/simulacao']" class="hover-nav-finance" id="camp-dates">Tesouro IPCA+</a></li>
-                <li><a [routerLink]="['/perfil-investidor']"class="hover-nav-finance" id="prices">CDB</a></li>
-                <li><a [routerLink]="['/simulacao']" class="hover-nav-finance" id="camp-dates">LC</a></li>
-                <li><a [routerLink]="['/perfil-investidor']"class="hover-nav-finance" id="prices">LCI</a></li>
-                <li><a [routerLink]="['/simulacao']" class="hover-nav-finance" id="camp-dates">LCA</a></li>
-                <li><a [routerLink]="['/perfil-investidor']"class="hover-nav-finance" id="prices">Mercado de Ações</a></li>
+                <li><a [routerLink]="['/investimento', 'tesouro-direto']" class="hover-nav-finance" id="camp-dates">Tesouro direto</a></li>
+                <li><a [routerLink]="['/investimento', 'tesouro-selic']" class="hover-nav-finance" id="prices">Tesouro SELIC</a></li>
+                <li><a [routerLink]="['/investimento', 'tesouro-ipca']" class="hover-nav-finance" id="camp-dates">Tesouro IPCA+</a></li>
+                <li><a [routerLink]="['/investimento', 'cdb']" class="hover-nav-finance" id="prices">CDB</a></li>
+                <li><a [routerLink]="['/investimento', 'lc']" class="hover-nav-finance" id="camp-dates">LC</a></li>
+                <li><a [routerLink]="['/investimento', 'lci']" class="hover-nav-finance" id="prices">LCI</a></li>
+                <li><a [routerLink]="['/investimento', 'lca']" class="hover-nav-finance" id="camp-dates">LCA</a></li>
+                <li><a [routerLink]="['/investimento', 'mercado-acoes']" class="hover-nav-finance" id="prices">Mercado de Ações</a></li>
             </ul>
             
             <ul id="simulacao" class="dropdown-content">

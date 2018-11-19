@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CaracteristicasInvestimentoComponent } from '../CaracteristicasInvestimento/caracteristicas.component';
 
 @Component({
     moduleId: module.id,
@@ -14,4 +15,5 @@ export class InvestimentoModelComponent {
     @Input() investimentoEspecifico:boolean;
     @Input() definicao: string;
     @Input() funcionamento: string;
+    @Input() caracteristicas: CaracteristicasInvestimentoComponent;
 }
