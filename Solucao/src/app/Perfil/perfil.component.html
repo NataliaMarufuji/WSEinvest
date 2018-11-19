@@ -4,11 +4,11 @@
     <nav>
         <div class="nav-wrapper">
             <div class="col s12">
-                <a class="breadcrumb">Objetivo</a>
-                <a class="breadcrumb">Prazo</a>
-                <a class="breadcrumb">Risco</a>
-                <a class="breadcrumb">Recebimento</a>
-                <a class="breadcrumb">Resultado</a>
+                <a class="breadcrumb" [ngClass]="{'selecionado' : mostrarObjetivo}">Objetivo</a>
+                <a class="breadcrumb" [ngClass]="{'selecionado' : mostrarPrazo}">Prazo</a>
+                <a class="breadcrumb" [ngClass]="{'selecionado' : mostrarRisco}">Risco</a>
+                <a class="breadcrumb" [ngClass]="{'selecionado' : mostrarRecebimento}">Recebimento</a>
+                <a class="breadcrumb" [ngClass]="{'selecionado' : mostrarResultado}">Resultado</a>
             </div>
         </div>
     </nav>
@@ -47,6 +47,9 @@
             </select>
             <label>Selecione o prazo desejado</label>
         </div>
+        <button class="btn card-login left" type="submit" (click)="mostraObjetivo()" name="action">Voltar
+            <i class="material-icons left">backspace</i>
+        </button>
         <button class="btn card-login right" type="submit" (click)="mostraRisco()" name="action">Próximo
             <i class="material-icons right">send</i>
         </button>
@@ -64,6 +67,9 @@
             </select>
             <label>Selecione o nível de risco</label>
         </div>
+        <button class="btn card-login left" type="submit" (click)="mostraPrazo()" name="action">Voltar
+            <i class="material-icons left">backspace</i>
+        </button>
         <button class="btn card-login right" type="submit" (click)="mostraRecebimento()" name="action">Próximo
             <i class="material-icons right">send</i>
         </button>
@@ -80,6 +86,9 @@
             </select>
             <label>Selecione o nível de risco</label>
         </div>
+        <button class="btn card-login left" type="submit" (click)="mostraRisco()" name="action">Voltar
+            <i class="material-icons left">backspace</i>
+        </button>
         <button class="btn card-login right" type="submit" (click)="mostraRecebimento()" name="action">Próximo
             <i class="material-icons right">send</i>
         </button>

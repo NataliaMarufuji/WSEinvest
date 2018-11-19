@@ -12,23 +12,32 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var PerfilComponent = /** @class */ (function () {
     function PerfilComponent() {
-        $.getScript('app/Scripts/select.min.js');
+        this.mostraObjetivo();
+    }
+    PerfilComponent.prototype.mostraObjetivo = function () {
         this.mostrarObjetivo = true;
         this.mostrarPrazo = false;
         this.mostrarRisco = false;
         this.mostrarRecebimento = false;
-    }
+        $.getScript('app/Scripts/select.min.js');
+    };
     PerfilComponent.prototype.mostraPrazo = function () {
         this.mostrarObjetivo = false;
+        this.mostrarRisco = false;
+        this.mostrarRecebimento = false;
         this.mostrarPrazo = true;
         $.getScript('app/Scripts/select.min.js');
     };
     PerfilComponent.prototype.mostraRisco = function () {
         this.mostrarRisco = true;
         this.mostrarPrazo = false;
+        this.mostrarRecebimento = false;
+        this.mostrarObjetivo = false;
         $.getScript('app/Scripts/select.min.js');
     };
     PerfilComponent.prototype.mostraRecebimento = function () {
+        this.mostrarPrazo = false;
+        this.mostrarObjetivo = false;
         this.mostrarRisco = false;
         this.mostrarRecebimento = true;
         $.getScript('app/Scripts/select.min.js');
