@@ -27,6 +27,30 @@ var InvestimentoModelService = /** @class */ (function () {
         return this.http.get('app/JsonData/Investimentos.json')
             .map(function (res) { return res.json(); });
     };
+    InvestimentoModelService.prototype.buscaVariantesTesouroDireto = function () {
+        return this.http.get('app/JsonData/TesouroDireto.json')
+            .map(function (res) { return res.json(); });
+    };
+    InvestimentoModelService.prototype.buscaVariantesTesouroSelic = function () {
+        return this.http.get('app/JsonData/TesouroSelic.json')
+            .map(function (res) { return res.json(); });
+    };
+    InvestimentoModelService.prototype.buscaVariantesTesouroIPCA = function () {
+        return this.http.get('app/JsonData/TesouroIPCA.json')
+            .map(function (res) { return res.json(); });
+    };
+    InvestimentoModelService.prototype.buscaVariantesCDB = function () {
+        return this.http.get('app/JsonData/CDB.json')
+            .map(function (res) { return res.json(); });
+    };
+    InvestimentoModelService.prototype.buscaVariantesLC = function () {
+        return this.http.get('app/JsonData/LC.json')
+            .map(function (res) { return res.json(); });
+    };
+    InvestimentoModelService.prototype.buscaVariantesLCI = function () {
+        return this.http.get('app/JsonData/LCI.json')
+            .map(function (res) { return res.json(); });
+    };
     InvestimentoModelService = __decorate([
         core_1.Injectable(),
         __metadata("design:paramtypes", [http_1.Http])

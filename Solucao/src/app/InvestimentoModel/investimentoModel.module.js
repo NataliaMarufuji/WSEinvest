@@ -10,13 +10,15 @@ var core_1 = require("@angular/core");
 var investimentoModel_component_1 = require("./investimentoModel.component");
 var investimentoModel_service_1 = require("./investimentoModel.service");
 var common_1 = require("@angular/common");
+var detalhes_component_1 = require("../DetalhesInvestimento/detalhes.component");
+var painelDetalhes_component_1 = require("../PainelDetalhes/painelDetalhes.component");
 var InvestimentoModelModule = /** @class */ (function () {
     function InvestimentoModelModule() {
     }
     InvestimentoModelModule = __decorate([
         core_1.NgModule({
             imports: [common_1.CommonModule],
-            declarations: [investimentoModel_component_1.InvestimentoModelComponent],
+            declarations: [investimentoModel_component_1.InvestimentoModelComponent, detalhes_component_1.DetalhesInvestimentoComponent, painelDetalhes_component_1.PainelDetalhesComponent],
             exports: [investimentoModel_component_1.InvestimentoModelComponent],
             providers: [investimentoModel_service_1.InvestimentoModelService]
         })

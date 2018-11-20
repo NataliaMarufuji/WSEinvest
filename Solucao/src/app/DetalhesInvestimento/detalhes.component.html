@@ -1,0 +1,38 @@
+
+<span class="card-title">{{nome}}</span>
+<p>{{codigo}}</p>
+<h3>{{rentabilidade}}</h3>
+<div>
+    <div class="row">
+        <label>Investimento mínimo</label>
+        <label class="right-align valor">{{minimo}}</label>
+    </div>
+    <div class="row">
+        <label>Rentabilidade</label>
+        <label class="right-align valor">{{rentabilidade}}</label>
+    </div>
+    <div class="row">
+        <label>Data de vencimento</label>
+        <label class="right-align valor">{{dataVencimento}}</label>
+    </div>
+    <div class="row">
+        <label>Vence em</label>
+        <label class="right-align valor">{{diasParaVencer}}</label>
+    </div>
+    <div class="row">
+        <label>Pagamento de juros</label>
+        <label class="right-align valor">{{pagamentoJuros}}</label>
+    </div>
+    <div class="row">
+        <label>IR sobre o rendimento</label>
+        <label class="right-align valor">{{IRRendimento}}</label>
+    </div>
+    <div class="row">
+        <label>IOF sobre o rendimento</label>
+        <label class="right-align valor">{{IOFRendimento}}</label>
+    </div>
+    <div class="row" *ngIf="rating">
+        <label>Rating</label>
+        <label class="right-align valor">{{rating}}</label>
+    </div>
+</div>

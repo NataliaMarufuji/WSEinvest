@@ -10,7 +10,43 @@
         "preco":"Grátis",
         "resgate":"Quando quiser",
         "imposto": "15% a 22,5%"
-    }
+    },
+    "variacaoDetalhes":
+     [
+        {
+            "nome": "Tesouro Direto",
+            "codigo": "Tesouro Prefixado 2021",
+            "minimo": "R$34,02",
+            "rentabilidade": "7,96%",
+            "dataVencimento": "01/01/2021",
+            "diasParaVencer": "773",
+            "pagamentoJuros": "",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias" 
+        },
+        {
+            "nome": "Tesouro Direto",
+            "codigo": "Tesouro Prefixado 2025",
+            "minimo": "R$34,02",
+            "rentabilidade": "9,74%",
+            "dataVencimento": "01/01/2025",
+            "diasParaVencer": "2234",
+            "pagamentoJuros": "",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias" 
+        },
+        {
+            "nome": "Tesouro Direto",
+            "codigo": "T. P. com Juros Semestrais 2029",
+            "minimo": "R$30,92",
+            "rentabilidade": "10,15%",
+            "dataVencimento": "01/01/2029",
+            "diasParaVencer": "3695",
+            "pagamentoJuros": "Semestral",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias" 
+        }
+     ]
 },
 {
     "nome": "Tesouro SELIC",
@@ -24,7 +60,21 @@
         "preco":"Grátis",
         "resgate":"Quando quiser",
         "imposto": "15% a 22,5%"
-    }
+    },
+    "variacaoDetalhes":
+     [
+        {
+            "nome": "Tesouro Selic",
+            "codigo": "Tesouro Selic 2023",
+            "minimo": "R$98,10",
+            "rentabilidade": "SELIC + 0,01%",
+            "dataVencimento": "01/03/2023",
+            "diasParaVencer": "1562",
+            "pagamentoJuros": "",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias" 
+        }
+     ]
 },
 {
     "nome": "Tesouro IPCA+",
@@ -38,7 +88,43 @@
         "preco":"Grátis",
         "resgate":"Quando quiser",
         "imposto": "15% a 22,5%"
-    }
+    },
+    "variacaoDetalhes":
+     [
+        {
+            "nome": "Tesouro IPCA+",
+            "codigo": "IPCA+ com Juros Semestrais 2026",
+            "minimo": "R$34,51",
+            "rentabilidade": "IPCA + 4,79%",
+            "dataVencimento": "15/08/2026",
+            "diasParaVencer": "2825",
+            "pagamentoJuros": "Semestral",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias" 
+        },
+        {
+            "nome": "Tesouro IPCA+",
+            "codigo": "IPCA+ 2024",
+            "minimo": "R$48,35",
+            "rentabilidade": "IPCA + 4,80%",
+            "dataVencimento": "15/08/2024",
+            "diasParaVencer": "2095",
+            "pagamentoJuros": "",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias" 
+        },
+        {
+            "nome": "Tesouro IPCA+",
+            "codigo": "IPCA+ com Juros Semestrais 2035",
+            "minimo": "R$35,07",
+            "rentabilidade": "IPCA + 5,02%",
+            "dataVencimento": "15/05/2035",
+            "diasParaVencer": "6020",
+            "pagamentoJuros": "Semestral",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias" 
+        }
+     ]
 },
 {
     "nome": "CDB",
@@ -52,7 +138,43 @@
         "preco":"Grátis",
         "resgate":"Somente no vencimento",
         "imposto": "15% a 22,5%"
-    }
+    },
+    "variacaoDetalhes":
+     [
+        {
+            "nome": "CDB",
+            "codigo": "Agibank",
+            "minimo": "R$30.000,00",
+            "rentabilidade": "93% do CDI",
+            "dataVencimento": "14/11/2020",
+            "diasParaVencer": "725",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias",
+            "rating": "Fitch BBB"
+        },
+        {
+            "nome": "CDB",
+            "codigo": "Banco ABC Brasil",
+            "minimo": "R$50.000,00",
+            "rentabilidade": "97% do CDI",
+            "dataVencimento": "21/05/2019",
+            "diasParaVencer": "182",
+            "IRRendimento": "20% de IR",
+            "IOFRendimento": "Isento após 30 dias",
+            "rating": "Fitch AAA"
+        },
+        {
+            "nome": "CDB",
+            "codigo": "Banco Maxima",
+            "minimo": "R$1.000,00",
+            "rentabilidade": "118% do CDI",
+            "dataVencimento": "19/10/2024",
+            "diasParaVencer": "2160",
+            "IRRendimento": "15% de IR",
+            "IOFRendimento": "Isento após 30 dias",
+            "rating": ""
+        }
+     ]
 },
 {
     "nome": "LC",
@@ -66,7 +188,43 @@
         "preco":"Grátis",
         "resgate":"Somente no vencimento",
         "imposto": "15% a 22,5%"
-    }
+    },
+    "variacaoDetalhes":
+     [
+        {
+            "nome": "LC",
+            "codigo": "Caruana",
+            "minimo": "R$4.000,00",
+            "rentabilidade": "8,60% a.a.",
+            "dataVencimento": "14/11/2020",
+            "diasParaVencer": "725",
+            "IRRendimento": "15% de IR",
+            "IOFRendimento": "Isento após 30 dias",
+            "rating": "S&P BB+"
+        },
+        {
+            "nome": "LC",
+            "codigo": "Agoracred",
+            "minimo": "R$12.000,00",
+            "rentabilidade": "122% do CDI",
+            "dataVencimento": "04/11/2021",
+            "diasParaVencer": "1080",
+            "IRRendimento": "15% de IR",
+            "IOFRendimento": "Isento após 30 dias",
+            "rating": ""
+        },
+        {
+            "nome": "LC",
+            "codigo": "Facta Financeira",
+            "minimo": "R$994,89",
+            "rentabilidade": "129% do CDI",
+            "dataVencimento": "21/10/2023",
+            "diasParaVencer": "1796",
+            "IRRendimento": "15% de IR",
+            "IOFRendimento": "Isento após 30 dias",
+            "rating": ""
+        } 
+     ]
 },
 {
     "nome": "LCI",
@@ -80,7 +238,43 @@
         "preco":"Grátis",
         "resgate":"Somente no vencimento",
         "imposto": "Isento"
-    }
+    },
+    "variacaoDetalhes":
+     [
+        {
+            "nome": "LCI",
+            "codigo": "Banco ABC Brasil",
+            "minimo": "R$100.000,00",
+            "rentabilidade": "85% do CDI",
+            "dataVencimento": "19/02/2019",
+            "diasParaVencer": "91",
+            "IRRendimento": "Isento de IR",
+            "IOFRendimento": "Isento após 30 dias",
+            "rating": "Fitch AAA"
+        },
+        {
+            "nome": "LCI",
+            "codigo": "Banco Maxima",
+            "minimo": "R$1.000,00",
+            "rentabilidade": "95% do CDI",
+            "dataVencimento": "21/05/2019",
+            "diasParaVencer": "182",
+            "IRRendimento": "Isento de IR",
+            "IOFRendimento": "Isento após 30 dias",
+            "rating": ""
+        },
+        {
+            "nome": "LCI",
+            "codigo": "Barigui Companhia Hipotecaria",
+            "minimo": "R$10.000,00",
+            "rentabilidade": "IPCA + 4%",
+            "dataVencimento": "20/11/2021",
+            "diasParaVencer": "1096",
+            "IRRendimento": "Isento de IR",
+            "IOFRendimento": "Isento após 30 dias",
+            "rating": ""
+        }
+     ]
 },
 {
     "nome": "LCA",

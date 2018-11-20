@@ -51,5 +51,13 @@
             </table>
             </div>
         </div>
+
+        <div class="row">
+            <painel-detalhes class="col-md-4" *ngFor="let detalhe of variacaoDetalhes">
+                    <detalhes [nome]="detalhe?.nome" [codigo]="detalhe?.codigo" [minimo]="detalhe?.minimo" [rentabilidade]="detalhe?.rentabilidade"
+                                [dataVencimento]="detalhe?.dataVencimento" [diasParaVencer]="detalhe?.diasParaVencer" [pagamentoJuros]="detalhe?.pagamentoJuros"
+                                [IRRendimento]="detalhe?.IRRendimento" [IOFRendimento]="detalhe?.IOFRendimento" [rating]="detalhe?.rating"></detalhes>
+            </painel-detalhes>
+        </div>
     </div>
 </div>

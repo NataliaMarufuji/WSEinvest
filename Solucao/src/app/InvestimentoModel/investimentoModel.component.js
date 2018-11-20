@@ -38,6 +38,10 @@ var InvestimentoModelComponent = /** @class */ (function () {
         core_1.Input(),
         __metadata("design:type", caracteristicas_component_1.CaracteristicasInvestimentoComponent)
     ], InvestimentoModelComponent.prototype, "caracteristicas", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Array)
+    ], InvestimentoModelComponent.prototype, "variacaoDetalhes", void 0);
     InvestimentoModelComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
