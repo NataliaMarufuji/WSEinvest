@@ -1,4 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
+import { AcaoMenuComponent }  from './AcaoMenu/AcaoMenu.component';
 import { MenuComponent } from './Menu/menu.component';
 import { MainComponent }  from './Main/main.component';
 import { LoginComponent }  from './Login/login.component';
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
    { path: 'simulacao', component: SimulacaoComponent },
    { path: 'primeiros-passos', component: PassosComponent},
    { path: 'investimentos', component: InvestimentosComponent},
-   { path: 'investimento/:tipoInvestimento', component: InvestimentoEspecificoComponent}
+   { path: 'investimento/:tipoInvestimento', component: InvestimentoEspecificoComponent},
+   { path: 'acoes', component: AcaoMenuComponent}
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

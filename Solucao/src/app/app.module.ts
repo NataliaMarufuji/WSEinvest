@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { routing }  from './app.routes';
+import { AcaoModule }  from './Acao/Acao.module';
+import { AcaoMenuComponent }  from './AcaoMenu/AcaoMenu.component';
 import { CadastroUsuarioComponent }  from './CadastroUsuario/cadastroUsuario.component';
 import { CaracteristicasInvestimentoComponent }  from './CaracteristicasInvestimento/caracteristicas.component';
 import { InvestimentoModelModule }  from './InvestimentoModel/investimentoModel.module';
@@ -26,9 +28,10 @@ import { InvestimentoEspecificoComponent } from './InvestimentoEspecifico/invest
         BrowserModule, 
         HttpModule, 
         routing, 
+        AcaoModule,
         InvestimentoModelModule
     ],
-    declarations: [ AppComponent, CaracteristicasInvestimentoComponent, MenuComponent,PainelComponent,  InvestimentoEspecificoComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PassosComponent, PerfilComponent, SimulacaoComponent, InvestimentosComponent ],
+    declarations: [ AppComponent, AcaoMenuComponent, CaracteristicasInvestimentoComponent, MenuComponent,PainelComponent,  InvestimentoEspecificoComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PassosComponent, PerfilComponent, SimulacaoComponent, InvestimentosComponent ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

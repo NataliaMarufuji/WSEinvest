@@ -12,6 +12,8 @@ var app_component_1 = require("./app.component");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
 var app_routes_1 = require("./app.routes");
+var Acao_module_1 = require("./Acao/Acao.module");
+var AcaoMenu_component_1 = require("./AcaoMenu/AcaoMenu.component");
 var cadastroUsuario_component_1 = require("./CadastroUsuario/cadastroUsuario.component");
 var caracteristicas_component_1 = require("./CaracteristicasInvestimento/caracteristicas.component");
 var investimentoModel_module_1 = require("./InvestimentoModel/investimentoModel.module");
@@ -35,9 +37,10 @@ var AppModule = /** @class */ (function () {
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
                 app_routes_1.routing,
+                Acao_module_1.AcaoModule,
                 investimentoModel_module_1.InvestimentoModelModule
             ],
-            declarations: [app_component_1.AppComponent, caracteristicas_component_1.CaracteristicasInvestimentoComponent, menu_component_1.MenuComponent, painel_component_1.PainelComponent, investimentoEspecifico_component_1.InvestimentoEspecificoComponent, main_component_1.MainComponent, listagemBolsa_component_1.ListagemBolsaComponent, login_component_1.LoginComponent, cadastroUsuario_component_1.CadastroUsuarioComponent, simulacaoMenu_component_1.SimulacaoMenuComponent, passos_component_1.PassosComponent, perfil_component_1.PerfilComponent, simulacao_component_1.SimulacaoComponent, investimentos_component_1.InvestimentosComponent],
+            declarations: [app_component_1.AppComponent, AcaoMenu_component_1.AcaoMenuComponent, caracteristicas_component_1.CaracteristicasInvestimentoComponent, menu_component_1.MenuComponent, painel_component_1.PainelComponent, investimentoEspecifico_component_1.InvestimentoEspecificoComponent, main_component_1.MainComponent, listagemBolsa_component_1.ListagemBolsaComponent, login_component_1.LoginComponent, cadastroUsuario_component_1.CadastroUsuarioComponent, simulacaoMenu_component_1.SimulacaoMenuComponent, passos_component_1.PassosComponent, perfil_component_1.PerfilComponent, simulacao_component_1.SimulacaoComponent, investimentos_component_1.InvestimentosComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

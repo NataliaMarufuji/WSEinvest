@@ -7,36 +7,37 @@ import { InvestimentoModelComponent } from '../InvestimentoModel/investimentoMod
 
 @Component({
     moduleId: module.id,
-    selector: 'investimento-especifico', 
+    selector: 'investimento-especifico',
     templateUrl: './investimentoEspecifico.component.html',
     styleUrls: ['./investimentoEspecifico.component.css']
 })
-export class InvestimentoEspecificoComponent { 
+export class InvestimentoEspecificoComponent {
 
     investimento: InvestimentoModelComponent;
     tipoInvestimento: String;;
     investimentoService: InvestimentoModelService;
     private sub: any;
 
-    constructor(private location: Location, private route : ActivatedRoute, investimentoService: InvestimentoModelService ) {
+    constructor(private location: Location, private route: ActivatedRoute, investimentoService: InvestimentoModelService) {
         this.investimentoService = investimentoService;
         this.buscaInvestimento();
     }
 
-    buscaInvestimento(){
+
+    buscaInvestimento() {
         this.investimentoService.buscaListaInvestimentos()
-        .subscribe(data => {
-            data.forEach(investimento => {
-                if(investimento.tipoInvestimento == this.tipoInvestimento){
+            .subscribe(data => {
+                data.forEach(investimento => {
+                    if (investimento.tipoInvestimento == this.tipoInvestimento) {
                     this.investimento = investimento;
-                }
+                    }
+                });
             });
-        }); 
     }
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
-            this.tipoInvestimento = params['tipoInvestimento']; 
+            this.tipoInvestimento = params['tipoInvestimento'];
             this.buscaInvestimento();
             console.log("tipo de investimento: " + this.tipoInvestimento)
         });

@@ -25,36 +25,5 @@ export class InvestimentoModelService {
         return this.http.get('app/JsonData/Investimentos.json')
             .map(res => res.json());
      }
-
-    buscaVariantesTesouroDireto(){
-        return this.http.get('app/JsonData/TesouroDireto.json')
-            .map(res => res.json());
-    } 
-
-    buscaVariantesTesouroSelic(){
-        return this.http.get('app/JsonData/TesouroSelic.json')
-            .map(res => res.json());
-    } 
-
-    buscaVariantesTesouroIPCA(){
-        return this.http.get('app/JsonData/TesouroIPCA.json')
-            .map(res => res.json());
-    } 
-
-    buscaVariantesCDB(){
-        return this.http.get('app/JsonData/CDB.json')
-            .map(res => res.json());
-    } 
-
-    buscaVariantesLC(){
-        return this.http.get('app/JsonData/LC.json')
-            .map(res => res.json());
-    } 
-
-    buscaVariantesLCI(){
-        return this.http.get('app/JsonData/LCI.json')
-            .map(res => res.json());
-    } 
-
 }
 

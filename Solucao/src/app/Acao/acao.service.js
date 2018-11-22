@@ -11,27 +11,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var http_1 = require("@angular/http");
 var core_1 = require("@angular/core");
-var InvestimentoModelService = /** @class */ (function () {
-    function InvestimentoModelService(http) {
-        this._listaInvestimentos = [];
+var AcaoService = /** @class */ (function () {
+    function AcaoService(http) {
+        this._listaAcoes = [];
         this.http = http;
     }
     ;
-    InvestimentoModelService.prototype.setProductList = function (listaInvestimentos) {
-        this._listaInvestimentos = listaInvestimentos;
+    AcaoService.prototype.setProductList = function (listaAcoes) {
+        this._listaAcoes = listaAcoes;
     };
-    InvestimentoModelService.prototype.getProductList = function () {
-        return this._listaInvestimentos;
+    AcaoService.prototype.getProductList = function () {
+        return this._listaAcoes;
     };
-    InvestimentoModelService.prototype.buscaListaInvestimentos = function () {
-        return this.http.get('app/JsonData/Investimentos.json')
+    AcaoService.prototype.buscaIbovespa = function () {
+        return this.http.get('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=NKT6F243BCB0413Z')
             .map(function (res) { return res.json(); });
     };
-    InvestimentoModelService = __decorate([
+    AcaoService = __decorate([
         core_1.Injectable(),
         __metadata("design:paramtypes", [http_1.Http])
-    ], InvestimentoModelService);
-    return InvestimentoModelService;
+    ], AcaoService);
+    return AcaoService;
 }());
-exports.InvestimentoModelService = InvestimentoModelService;
-//# sourceMappingURL=investimentoModel.service.js.map
+exports.AcaoService = AcaoService;
+//# sourceMappingURL=acao.service.js.map
