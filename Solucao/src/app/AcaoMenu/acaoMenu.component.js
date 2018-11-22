@@ -10,8 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var alpha_vantage_cli_1 = require("alpha-vantage-cli");
 var AcaoMenuComponent = /** @class */ (function () {
-    function AcaoMenuComponent() {
+    function AcaoMenuComponent(route) {
+        this.route = route;
+        this.yourApiKey = 'NKT6F243BCB0413Z';
+        this.alphaVantageAPI = new alpha_vantage_cli_1.AlphaVantageAPI(yourApiKey, 'compact', true);
+        //this.acaoService = acaoService;
+        /* this.acaoService.buscaIbovespa()
+                        .subscribe(data => {
+                            this.acao = data;
+                        });*/
+        alphaVantageAPI.getIntradayData('MSFT', '15min')
+            .then(function (intradayData) {
+            console.log("Intraday data:");
+            console.log(intradayData);
+        })
+            .catch(function (err) {
+            console.error(err);
+        });
     }
     AcaoMenuComponent = __decorate([
         core_1.Component({
@@ -20,9 +38,9 @@ var AcaoMenuComponent = /** @class */ (function () {
             templateUrl: './acaoMenu.component.html',
             styleUrls: ['./acaoMenu.component.css']
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [router_1.ActivatedRoute])
     ], AcaoMenuComponent);
     return AcaoMenuComponent;
 }());
 exports.AcaoMenuComponent = AcaoMenuComponent;
-//# sourceMappingURL=acaoMenu.component.js.map
+//# sourceMappingURL=AcaoMenu.component.js.map

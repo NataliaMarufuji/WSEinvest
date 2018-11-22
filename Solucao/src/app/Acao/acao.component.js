@@ -24,4 +24,4 @@ var AcaoComponent = /** @class */ (function () {
     return AcaoComponent;
 }());
 exports.AcaoComponent = AcaoComponent;
-//# sourceMappingURL=acao.component.js.map
+//# sourceMappingURL=Acao.component.js.map

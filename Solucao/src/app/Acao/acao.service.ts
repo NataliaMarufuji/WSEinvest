@@ -6,11 +6,12 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AcaoService { 
 
-    http: Http;;
+    http: Http;
     private _listaAcoes: AcaoComponent[] = [];
 
     constructor(http: Http) {
         this.http = http;
+
     }
 
     public setProductList(listaAcoes: AcaoComponent[]) {
@@ -22,8 +23,7 @@ export class AcaoService {
     }
 
     buscaIbovespa(){
-        return this.http.get('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=NKT6F243BCB0413Z')
-        .map(res => res.json());
+        
     } 
 
 }

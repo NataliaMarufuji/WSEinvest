@@ -16,7 +16,6 @@ var AcaoService = /** @class */ (function () {
         this._listaAcoes = [];
         this.http = http;
     }
-    ;
     AcaoService.prototype.setProductList = function (listaAcoes) {
         this._listaAcoes = listaAcoes;
     };
@@ -24,8 +23,6 @@ var AcaoService = /** @class */ (function () {
         return this._listaAcoes;
     };
     AcaoService.prototype.buscaIbovespa = function () {
-        return this.http.get('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=NKT6F243BCB0413Z')
-            .map(function (res) { return res.json(); });
     };
     AcaoService = __decorate([
         core_1.Injectable(),
@@ -34,4 +31,4 @@ var AcaoService = /** @class */ (function () {
     return AcaoService;
 }());
 exports.AcaoService = AcaoService;
-//# sourceMappingURL=acao.service.js.map
+//# sourceMappingURL=Acao.service.js.map
