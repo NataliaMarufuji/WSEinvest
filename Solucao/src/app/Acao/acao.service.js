@@ -13,6 +13,7 @@ var http_1 = require("@angular/http");
 var core_1 = require("@angular/core");
 var AcaoService = /** @class */ (function () {
     function AcaoService(http) {
+        //yourApiKey = 'NKT6F243BCB0413Z';
         this._listaAcoes = [];
         this.http = http;
     }
@@ -23,6 +24,10 @@ var AcaoService = /** @class */ (function () {
         return this._listaAcoes;
     };
     AcaoService.prototype.buscaIbovespa = function () {
+        var yourApiKey = 'demo';
+        //var alphaVantageAPI = new AlphaVantageAPI(yourApiKey, 'compact', true);
+        return this.http.get('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=NKT6F243BCB0413Z')
+            .map(function (res) { return res.json(); });
     };
     AcaoService = __decorate([
         core_1.Injectable(),

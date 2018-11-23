@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AlphaVantageAPI } from 'alpha-vantage-cli';
+import { AcaoService } from '../Acao/Acao.service';
 
 @Component({
     moduleId: module.id,
@@ -9,24 +9,16 @@ import { AlphaVantageAPI } from 'alpha-vantage-cli';
     styleUrls: ['./acaoMenu.component.css']
 })
 export class AcaoMenuComponent { 
-
-    yourApiKey = 'NKT6F243BCB0413Z';
-    alphaVantageAPI = new AlphaVantageAPI(yourApiKey, 'compact', true);
     
-    constructor(private route: ActivatedRoute) {
-        //this.acaoService = acaoService;
-        /* this.acaoService.buscaIbovespa()
+    acaoService: AcaoService;
+
+    constructor(private route: ActivatedRoute, acaoService: AcaoService) {
+        this.acaoService = acaoService;
+        this.acaoService.buscaIbovespa()
                         .subscribe(data => {
-                            this.acao = data;
-                        });*/
-                alphaVantageAPI.getIntradayData('MSFT', '15min')
-                .then(intradayData => {
-                    console.log("Intraday data:");
-                    console.log(intradayData);
-                })
-                .catch(err => {
-                    console.error(err);
-                });
+                            console.log(data);
+                        });
+
         }
 
 }

@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class AcaoService { 
 
     http: Http;
+    //yourApiKey = 'NKT6F243BCB0413Z';
     private _listaAcoes: AcaoComponent[] = [];
 
     constructor(http: Http) {
@@ -23,7 +24,11 @@ export class AcaoService {
     }
 
     buscaIbovespa(){
+        var yourApiKey = 'demo';
+        //var alphaVantageAPI = new AlphaVantageAPI(yourApiKey, 'compact', true);
         
+        return this.http.get('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=NKT6F243BCB0413Z')  
+        .map(res=> res.json()); 
     } 
 
 }
