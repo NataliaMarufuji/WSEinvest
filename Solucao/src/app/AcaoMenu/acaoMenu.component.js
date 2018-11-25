@@ -17,6 +17,7 @@ var AcaoMenuComponent = /** @class */ (function () {
     function AcaoMenuComponent(route, acaoService) {
         var _this = this;
         this.route = route;
+        this.acoes = [];
         this.acao = new Acao_component_1.AcaoComponent();
         this.lineChartData = [
             { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
@@ -67,15 +68,8 @@ var AcaoMenuComponent = /** @class */ (function () {
                 _this.acao.low = _this.retornoAcoes[objKey]["3. low"];
                 _this.acao.close = _this.retornoAcoes[objKey]["4. close"];
                 _this.acao.volume = _this.retornoAcoes[objKey]["5. volume"];
+                _this.acoes.push(_this.acao);
             }
-            /* this.retornoAcoes.forEach(acao =>{
-               acao.open = acao["1. open"];
-               acao.high = acao["2. high"];
-               acao.low = acao["3. low"];
-               acao.close = acao["4. close"];
-               acao.volume = acao["5. volume"];
-             })*/
-            _this.acoes = _this.retornoAcoes;
             console.log(_this.acoes);
         });
     }

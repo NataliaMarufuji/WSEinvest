@@ -12,7 +12,7 @@ import { AcaoComponent } from '../Acao/Acao.component';
 export class AcaoMenuComponent { 
     
     acaoService: AcaoService;
-    acoes: Array<AcaoComponent>;
+    acoes: AcaoComponent[] = [];
     retornoAcoes : Array<any>;
     acao: AcaoComponent = new AcaoComponent();
 
@@ -29,16 +29,8 @@ export class AcaoMenuComponent {
                             this.acao.low = this.retornoAcoes[objKey]["3. low"];
                             this.acao.close = this.retornoAcoes[objKey]["4. close"];
                             this.acao.volume = this.retornoAcoes[objKey]["5. volume"];
+                            this.acoes.push(this.acao);
                           }
-                         /* this.retornoAcoes.forEach(acao =>{
-                            acao.open = acao["1. open"];
-                            acao.high = acao["2. high"];
-                            acao.low = acao["3. low"];
-                            acao.close = acao["4. close"];
-                            acao.volume = acao["5. volume"];
-                          })*/
-
-                            this.acoes = this.retornoAcoes;
                             console.log(this.acoes);
                         });
 
