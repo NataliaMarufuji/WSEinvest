@@ -27,6 +27,8 @@
       "angular2-materialize": "npm:angular2-materialize",
       "materialize-css": "node-modules/materialize-css",
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
+      'chart.js': 'npm:chart.js/dist/chart.js',
+      'ng2-charts':                 'node_modules/ng2-charts',
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -45,7 +47,9 @@
         main: './index.js',
         defaultExtension: 'js'
       },
-      'angular2-logger': { defaultExtension: 'js' }
+      'angular2-logger': { defaultExtension: 'js' },
+      'ng2-charts':      { main: 'ng2-charts.umd.js', 
+                          defaultExtension: 'js' },
     }
   });
 })(this);

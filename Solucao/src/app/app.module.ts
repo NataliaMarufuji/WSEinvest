@@ -19,6 +19,8 @@ import { SimulacaoMenuComponent }  from './SimulacaoMenu/simulacaoMenu.component
 import { PainelComponent } from './Painel/painel.component';
 import { PassosComponent } from './Passos/passos.component';
 import { PerfilComponent } from './Perfil/perfil.component';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import Chart from 'chart.js';
 import { InvestimentoEspecificoComponent } from './InvestimentoEspecifico/investimentoEspecifico.component';
 
 
@@ -28,6 +30,7 @@ import { InvestimentoEspecificoComponent } from './InvestimentoEspecifico/invest
         BrowserModule, 
         HttpModule, 
         routing, 
+        ChartsModule,
         AcaoModule,
         InvestimentoModelModule
     ],

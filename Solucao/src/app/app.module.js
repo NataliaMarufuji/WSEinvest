@@ -27,6 +27,7 @@ var simulacaoMenu_component_1 = require("./SimulacaoMenu/simulacaoMenu.component
 var painel_component_1 = require("./Painel/painel.component");
 var passos_component_1 = require("./Passos/passos.component");
 var perfil_component_1 = require("./Perfil/perfil.component");
+var ng2_charts_1 = require("ng2-charts/ng2-charts");
 var investimentoEspecifico_component_1 = require("./InvestimentoEspecifico/investimentoEspecifico.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -37,6 +38,7 @@ var AppModule = /** @class */ (function () {
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
                 app_routes_1.routing,
+                ng2_charts_1.ChartsModule,
                 Acao_module_1.AcaoModule,
                 investimentoModel_module_1.InvestimentoModelModule
             ],
