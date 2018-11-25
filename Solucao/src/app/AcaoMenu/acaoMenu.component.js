@@ -12,9 +12,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var Acao_service_1 = require("../Acao/Acao.service");
+var Acao_component_1 = require("../Acao/Acao.component");
 var AcaoMenuComponent = /** @class */ (function () {
     function AcaoMenuComponent(route, acaoService) {
+        var _this = this;
         this.route = route;
+        this.acao = new Acao_component_1.AcaoComponent();
         this.lineChartData = [
             { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
             { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' },
@@ -55,7 +58,25 @@ var AcaoMenuComponent = /** @class */ (function () {
         this.acaoService = acaoService;
         this.acaoService.buscaIbovespa()
             .subscribe(function (data) {
-            console.log(data);
+            _this.retornoAcoes = data["Time Series (5min)"];
+            for (var i = 0; i < Object.keys(_this.retornoAcoes).length; i++) {
+                console.log(Object.keys(_this.retornoAcoes)[i]);
+                var objKey = Object.keys(_this.retornoAcoes)[i];
+                _this.acao.open = _this.retornoAcoes[objKey]["1. open"];
+                _this.acao.high = _this.retornoAcoes[objKey]["2. high"];
+                _this.acao.low = _this.retornoAcoes[objKey]["3. low"];
+                _this.acao.close = _this.retornoAcoes[objKey]["4. close"];
+                _this.acao.volume = _this.retornoAcoes[objKey]["5. volume"];
+            }
+            /* this.retornoAcoes.forEach(acao =>{
+               acao.open = acao["1. open"];
+               acao.high = acao["2. high"];
+               acao.low = acao["3. low"];
+               acao.close = acao["4. close"];
+               acao.volume = acao["5. volume"];
+             })*/
+            _this.acoes = _this.retornoAcoes;
+            console.log(_this.acoes);
         });
     }
     AcaoMenuComponent.prototype.randomize = function () {

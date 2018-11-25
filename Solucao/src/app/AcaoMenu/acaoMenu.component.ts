@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AcaoService } from '../Acao/Acao.service';
+import { AcaoComponent } from '../Acao/Acao.component';
 
 @Component({
     moduleId: module.id,
@@ -11,12 +12,34 @@ import { AcaoService } from '../Acao/Acao.service';
 export class AcaoMenuComponent { 
     
     acaoService: AcaoService;
+    acoes: Array<AcaoComponent>;
+    retornoAcoes : Array<any>;
+    acao: AcaoComponent = new AcaoComponent();
 
     constructor(private route: ActivatedRoute, acaoService: AcaoService) {
         this.acaoService = acaoService;
         this.acaoService.buscaIbovespa()
                         .subscribe(data => {
-                            console.log(data);
+                          this.retornoAcoes = data["Time Series (5min)"];
+                          for(var i=0; i< Object.keys(this.retornoAcoes).length; i++){
+                            console.log(Object.keys(this.retornoAcoes)[i]);
+                            var objKey = Object.keys(this.retornoAcoes)[i]
+                            this.acao.open = this.retornoAcoes[objKey]["1. open"];
+                            this.acao.high = this.retornoAcoes[objKey]["2. high"];
+                            this.acao.low = this.retornoAcoes[objKey]["3. low"];
+                            this.acao.close = this.retornoAcoes[objKey]["4. close"];
+                            this.acao.volume = this.retornoAcoes[objKey]["5. volume"];
+                          }
+                         /* this.retornoAcoes.forEach(acao =>{
+                            acao.open = acao["1. open"];
+                            acao.high = acao["2. high"];
+                            acao.low = acao["3. low"];
+                            acao.close = acao["4. close"];
+                            acao.volume = acao["5. volume"];
+                          })*/
+
+                            this.acoes = this.retornoAcoes;
+                            console.log(this.acoes);
                         });
 
         }
