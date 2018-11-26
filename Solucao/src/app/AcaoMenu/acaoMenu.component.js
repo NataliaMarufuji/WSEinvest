@@ -19,15 +19,22 @@ var AcaoMenuComponent = /** @class */ (function () {
         this.route = route;
         this.acoes = [];
         this.acao = new Acao_component_1.AcaoComponent();
-        this.lineChartData = [
-            { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-            { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' },
-            { data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C' }
-        ];
-        this.lineChartLabels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+        this.lineChartLabels = [];
         this.lineChartOptions = {
             responsive: true
         };
+        this.lineChartLegend = true;
+        this.lineChartType = 'line';
+        this.lineChartData = [
+            { data: [], label: '' }
+        ];
+        /* public lineChartData:Array<any> = [
+              {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
+              {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},
+              {data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C'}
+            ];
+            */
+        //public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
         this.lineChartColors = [
             {
                 backgroundColor: 'rgba(148,159,177,0.2)',
@@ -54,15 +61,14 @@ var AcaoMenuComponent = /** @class */ (function () {
                 pointHoverBorderColor: 'rgba(148,159,177,0.8)'
             }
         ];
-        this.lineChartLegend = true;
-        this.lineChartType = 'line';
         this.acaoService = acaoService;
         this.acaoService.buscaIbovespa()
             .subscribe(function (data) {
             _this.retornoAcoes = data["Time Series (5min)"];
             for (var i = 0; i < Object.keys(_this.retornoAcoes).length; i++) {
-                console.log(Object.keys(_this.retornoAcoes)[i]);
                 var objKey = Object.keys(_this.retornoAcoes)[i];
+                var time = objKey.substring(10, 19);
+                _this.acao.time = time;
                 _this.acao.open = _this.retornoAcoes[objKey]["1. open"];
                 _this.acao.high = _this.retornoAcoes[objKey]["2. high"];
                 _this.acao.low = _this.retornoAcoes[objKey]["3. low"];
@@ -70,9 +76,25 @@ var AcaoMenuComponent = /** @class */ (function () {
                 _this.acao.volume = _this.retornoAcoes[objKey]["5. volume"];
                 _this.acoes.push(_this.acao);
             }
+            _this.preencheLabel();
+            _this.preencheData();
             console.log(_this.acoes);
         });
     }
+    AcaoMenuComponent.prototype.preencheLabel = function () {
+        var _this = this;
+        this.acoes.forEach(function (atual) {
+            _this.lineChartLabels.push(atual.time);
+        });
+    };
+    AcaoMenuComponent.prototype.preencheData = function () {
+        var _this = this;
+        this.lineChartData = [{ data: [], label: 'Volume' }];
+        this.acoes.forEach(function (atual) {
+            _this.lineChartData[0].data.push(Number(atual.volume));
+        });
+        console.log(this.lineChartData);
+    };
     AcaoMenuComponent.prototype.randomize = function () {
         var _lineChartData = new Array(this.lineChartData.length);
         for (var i = 0; i < this.lineChartData.length; i++) {
