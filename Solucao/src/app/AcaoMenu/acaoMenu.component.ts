@@ -14,7 +14,6 @@ export class AcaoMenuComponent {
     acaoService: AcaoService;
     acoes: AcaoComponent[] = [];
     retornoAcoes : Array<any>;
-    acao: AcaoComponent = new AcaoComponent();
     public lineChartLabels:Array<any> = [];
     public lineChartOptions:any = {
       responsive: true
@@ -32,20 +31,34 @@ export class AcaoMenuComponent {
                           this.retornoAcoes = data["Time Series (5min)"];
                           for(var i=0; i< Object.keys(this.retornoAcoes).length; i++){
                             var objKey = Object.keys(this.retornoAcoes)[i]
+                            var acao: AcaoComponent = new AcaoComponent();
                             var time = objKey.substring(10,19);
-                            this.acao.time = time;
-                            this.acao.open = this.retornoAcoes[objKey]["1. open"];
-                            this.acao.high = this.retornoAcoes[objKey]["2. high"];
-                            this.acao.low = this.retornoAcoes[objKey]["3. low"];
-                            this.acao.close = this.retornoAcoes[objKey]["4. close"];
-                            this.acao.volume = this.retornoAcoes[objKey]["5. volume"];
-                            this.acoes.push(this.acao);
+                            var date = objKey.substring(0,10);
+                            acao.date = date;
+                            acao.time = time;
+                            acao.open = this.retornoAcoes[objKey]["1. open"];
+                            acao.high = this.retornoAcoes[objKey]["2. high"];
+                            acao.low = this.retornoAcoes[objKey]["3. low"];
+                            acao.close = this.retornoAcoes[objKey]["4. close"];
+                            acao.volume = this.retornoAcoes[objKey]["5. volume"];
+                            this.acoes.push(acao);
                           }
+                          this.formataDados();
                           this.preencheLabel();
                           this.preencheData();
                             console.log(this.acoes);
                         });
 
+        }
+
+        formataDados(){
+          var listaAcoesProvisoria:AcaoComponent[] = [];
+          for(var i=this.acoes.length - 1; i >= 0 ; i--){
+            if(this.acoes[i].date == "2018-11-21"){
+              listaAcoesProvisoria.push(this.acoes[i]);
+            }
+          }
+          this.acoes = listaAcoesProvisoria;
         }
 
         preencheLabel(){
@@ -55,25 +68,20 @@ export class AcaoMenuComponent {
         }
 
         preencheData(){
-          this.lineChartData = [{data:[], label: 'Volume'}];
+          this.lineChartData = [{data:[], label: 'Volume'}, {data:[], label: 'High'}, {data:[], label: 'Low'}];
           this.acoes.forEach(atual => {
             this.lineChartData[0].data.push(Number(atual.volume));
+            this.lineChartData[1].data.push(Number(atual.high));
+            this.lineChartData[2].data.push(Number(atual.low));
           })
           console.log(this.lineChartData);
         }
-      /* public lineChartData:Array<any> = [
-            {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-            {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},
-            {data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C'}
-          ];
-          */
-          //public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-          
+
           public lineChartColors:Array<any> = [
             { // grey
-              backgroundColor: 'rgba(148,159,177,0.2)',
-              borderColor: 'rgba(148,159,177,1)',
-              pointBackgroundColor: 'rgba(148,159,177,1)',
+              backgroundColor: 'rgba(184,157,69,0.2)',
+              borderColor: 'rgba(31,56,87,1)',
+              pointBackgroundColor: 'rgba(31,56,87,1)',
               pointBorderColor: '#fff',
               pointHoverBackgroundColor: '#fff',
               pointHoverBorderColor: 'rgba(148,159,177,0.8)'

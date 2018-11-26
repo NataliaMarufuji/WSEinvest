@@ -1,0 +1,32 @@
+.tabela-dados{
+    margin-top: 50%;
+}
+
+.tabela-head{
+    background-color: #1F3857;
+    color: white;
+}
+
+.tabela-data:nth-child(2){
+    background-color: #D7C897;
+}
+
+.tabela-data:last-child{
+    background-color: #A9881C;
+}
+
+.tabela-data{
+    background-color: #C8B36E;
+}
+
+.volume{
+    background-color: #D7C897;
+}
+
+.high{
+    background-color: #C8B36E;
+}
+
+.low{
+    background-color: #A9881C;
+}

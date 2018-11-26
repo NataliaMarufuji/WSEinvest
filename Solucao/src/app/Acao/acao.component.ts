@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AcaoComponent { 
 
+    date: string;
     time: string;
     open: string;
     high: string;

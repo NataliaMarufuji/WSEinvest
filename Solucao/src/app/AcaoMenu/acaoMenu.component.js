@@ -18,7 +18,6 @@ var AcaoMenuComponent = /** @class */ (function () {
         var _this = this;
         this.route = route;
         this.acoes = [];
-        this.acao = new Acao_component_1.AcaoComponent();
         this.lineChartLabels = [];
         this.lineChartOptions = {
             responsive: true
@@ -28,18 +27,11 @@ var AcaoMenuComponent = /** @class */ (function () {
         this.lineChartData = [
             { data: [], label: '' }
         ];
-        /* public lineChartData:Array<any> = [
-              {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-              {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},
-              {data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C'}
-            ];
-            */
-        //public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
         this.lineChartColors = [
             {
-                backgroundColor: 'rgba(148,159,177,0.2)',
-                borderColor: 'rgba(148,159,177,1)',
-                pointBackgroundColor: 'rgba(148,159,177,1)',
+                backgroundColor: 'rgba(184,157,69,0.2)',
+                borderColor: 'rgba(31,56,87,1)',
+                pointBackgroundColor: 'rgba(31,56,87,1)',
                 pointBorderColor: '#fff',
                 pointHoverBackgroundColor: '#fff',
                 pointHoverBorderColor: 'rgba(148,159,177,0.8)'
@@ -67,20 +59,33 @@ var AcaoMenuComponent = /** @class */ (function () {
             _this.retornoAcoes = data["Time Series (5min)"];
             for (var i = 0; i < Object.keys(_this.retornoAcoes).length; i++) {
                 var objKey = Object.keys(_this.retornoAcoes)[i];
+                var acao = new Acao_component_1.AcaoComponent();
                 var time = objKey.substring(10, 19);
-                _this.acao.time = time;
-                _this.acao.open = _this.retornoAcoes[objKey]["1. open"];
-                _this.acao.high = _this.retornoAcoes[objKey]["2. high"];
-                _this.acao.low = _this.retornoAcoes[objKey]["3. low"];
-                _this.acao.close = _this.retornoAcoes[objKey]["4. close"];
-                _this.acao.volume = _this.retornoAcoes[objKey]["5. volume"];
-                _this.acoes.push(_this.acao);
+                var date = objKey.substring(0, 10);
+                acao.date = date;
+                acao.time = time;
+                acao.open = _this.retornoAcoes[objKey]["1. open"];
+                acao.high = _this.retornoAcoes[objKey]["2. high"];
+                acao.low = _this.retornoAcoes[objKey]["3. low"];
+                acao.close = _this.retornoAcoes[objKey]["4. close"];
+                acao.volume = _this.retornoAcoes[objKey]["5. volume"];
+                _this.acoes.push(acao);
             }
+            _this.formataDados();
             _this.preencheLabel();
             _this.preencheData();
             console.log(_this.acoes);
         });
     }
+    AcaoMenuComponent.prototype.formataDados = function () {
+        var listaAcoesProvisoria = [];
+        for (var i = this.acoes.length - 1; i >= 0; i--) {
+            if (this.acoes[i].date == "2018-11-21") {
+                listaAcoesProvisoria.push(this.acoes[i]);
+            }
+        }
+        this.acoes = listaAcoesProvisoria;
+    };
     AcaoMenuComponent.prototype.preencheLabel = function () {
         var _this = this;
         this.acoes.forEach(function (atual) {
@@ -89,9 +94,11 @@ var AcaoMenuComponent = /** @class */ (function () {
     };
     AcaoMenuComponent.prototype.preencheData = function () {
         var _this = this;
-        this.lineChartData = [{ data: [], label: 'Volume' }];
+        this.lineChartData = [{ data: [], label: 'Volume' }, { data: [], label: 'High' }, { data: [], label: 'Low' }];
         this.acoes.forEach(function (atual) {
             _this.lineChartData[0].data.push(Number(atual.volume));
+            _this.lineChartData[1].data.push(Number(atual.high));
+            _this.lineChartData[2].data.push(Number(atual.low));
         });
         console.log(this.lineChartData);
     };
