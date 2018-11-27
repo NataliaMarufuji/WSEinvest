@@ -2,6 +2,7 @@ import { NgModule }  from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 import 'rxjs/add/operator/map';
 import { routing }  from './app.routes';
 import { AcaoModule }  from './Acao/Acao.module';
@@ -21,6 +22,8 @@ import { PassosComponent } from './Passos/passos.component';
 import { PerfilComponent } from './Perfil/perfil.component';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import Chart from 'chart.js';
+import { UsuarioModule } from './Usuario/usuario.module';
+import { ContaUsuarioComponent } from './ContaUsuario/ContaUsuario.component';
 import { InvestimentoEspecificoComponent } from './InvestimentoEspecifico/investimentoEspecifico.component';
 
 
@@ -29,12 +32,14 @@ import { InvestimentoEspecificoComponent } from './InvestimentoEspecifico/invest
     imports: [ 
         BrowserModule, 
         HttpModule, 
-        routing, 
+        routing,
+        FormsModule,
         ChartsModule,
         AcaoModule,
-        InvestimentoModelModule
+        InvestimentoModelModule,
+        UsuarioModule,
     ],
-    declarations: [ AppComponent, AcaoMenuComponent, CaracteristicasInvestimentoComponent, MenuComponent,PainelComponent,  InvestimentoEspecificoComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PassosComponent, PerfilComponent, SimulacaoComponent, InvestimentosComponent ],
+    declarations: [ AppComponent, AcaoMenuComponent, ContaUsuarioComponent, CaracteristicasInvestimentoComponent, MenuComponent,PainelComponent,  InvestimentoEspecificoComponent, MainComponent, ListagemBolsaComponent, LoginComponent, CadastroUsuarioComponent, SimulacaoMenuComponent, PassosComponent, PerfilComponent, SimulacaoComponent, InvestimentosComponent ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

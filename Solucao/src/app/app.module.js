@@ -10,6 +10,7 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
 var http_1 = require("@angular/http");
+var forms_1 = require("@angular/forms");
 require("rxjs/add/operator/map");
 var app_routes_1 = require("./app.routes");
 var Acao_module_1 = require("./Acao/Acao.module");
@@ -28,6 +29,8 @@ var painel_component_1 = require("./Painel/painel.component");
 var passos_component_1 = require("./Passos/passos.component");
 var perfil_component_1 = require("./Perfil/perfil.component");
 var ng2_charts_1 = require("ng2-charts/ng2-charts");
+var usuario_module_1 = require("./Usuario/usuario.module");
+var ContaUsuario_component_1 = require("./ContaUsuario/ContaUsuario.component");
 var investimentoEspecifico_component_1 = require("./InvestimentoEspecifico/investimentoEspecifico.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -38,11 +41,13 @@ var AppModule = /** @class */ (function () {
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
                 app_routes_1.routing,
+                forms_1.FormsModule,
                 ng2_charts_1.ChartsModule,
                 Acao_module_1.AcaoModule,
-                investimentoModel_module_1.InvestimentoModelModule
+                investimentoModel_module_1.InvestimentoModelModule,
+                usuario_module_1.UsuarioModule,
             ],
-            declarations: [app_component_1.AppComponent, AcaoMenu_component_1.AcaoMenuComponent, caracteristicas_component_1.CaracteristicasInvestimentoComponent, menu_component_1.MenuComponent, painel_component_1.PainelComponent, investimentoEspecifico_component_1.InvestimentoEspecificoComponent, main_component_1.MainComponent, listagemBolsa_component_1.ListagemBolsaComponent, login_component_1.LoginComponent, cadastroUsuario_component_1.CadastroUsuarioComponent, simulacaoMenu_component_1.SimulacaoMenuComponent, passos_component_1.PassosComponent, perfil_component_1.PerfilComponent, simulacao_component_1.SimulacaoComponent, investimentos_component_1.InvestimentosComponent],
+            declarations: [app_component_1.AppComponent, AcaoMenu_component_1.AcaoMenuComponent, ContaUsuario_component_1.ContaUsuarioComponent, caracteristicas_component_1.CaracteristicasInvestimentoComponent, menu_component_1.MenuComponent, painel_component_1.PainelComponent, investimentoEspecifico_component_1.InvestimentoEspecificoComponent, main_component_1.MainComponent, listagemBolsa_component_1.ListagemBolsaComponent, login_component_1.LoginComponent, cadastroUsuario_component_1.CadastroUsuarioComponent, simulacaoMenu_component_1.SimulacaoMenuComponent, passos_component_1.PassosComponent, perfil_component_1.PerfilComponent, simulacao_component_1.SimulacaoComponent, investimentos_component_1.InvestimentosComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

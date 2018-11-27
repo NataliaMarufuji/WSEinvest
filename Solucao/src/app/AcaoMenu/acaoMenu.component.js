@@ -80,7 +80,7 @@ var AcaoMenuComponent = /** @class */ (function () {
     AcaoMenuComponent.prototype.formataDados = function () {
         var listaAcoesProvisoria = [];
         for (var i = this.acoes.length - 1; i >= 0; i--) {
-            if (this.acoes[i].date == "2018-11-21") {
+            if (this.acoes[i].date == "2018-11-26") {
                 listaAcoesProvisoria.push(this.acoes[i]);
             }
         }

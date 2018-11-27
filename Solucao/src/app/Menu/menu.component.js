@@ -10,11 +10,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var usuario_service_1 = require("../Usuario/usuario.service");
+var usuario_component_1 = require("../Usuario/usuario.component");
 var MenuComponent = /** @class */ (function () {
-    function MenuComponent() {
+    function MenuComponent(userService, route, router) {
         this.loginOuCadastro = false;
         $.getScript('app/Scripts/dropdown-menu.min.js');
+        $.getScript('app/Scripts/select.min.js');
+        this.route = route;
+        this.router = router;
+        this.userService = userService;
+        this.usuario = this.userService.getUsuario();
+        if (this.usuario != undefined) {
+            this.usuarioAutenticado = this.userService.getAutenticado();
+        }
     }
+    MenuComponent.prototype.verificaAcao = function (acao) {
+        if (acao == 1) {
+            this.router.navigateByUrl("/minha-conta");
+        }
+        else if (acao == 2) {
+            this.logout();
+        }
+    };
+    MenuComponent.prototype.logout = function () {
+        this.usuarioAutenticado = false;
+        this.userService.setAutenticado(false);
+        this.userService.setUsuario(new usuario_component_1.UsuarioComponent());
+        location.reload();
+    };
     __decorate([
         core_1.Input(),
         __metadata("design:type", Object)
@@ -26,7 +51,7 @@ var MenuComponent = /** @class */ (function () {
             templateUrl: './menu.component.html',
             styleUrls: ['./menu.component.css']
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [usuario_service_1.UsuarioService, router_1.ActivatedRoute, router_1.Router])
     ], MenuComponent);
     return MenuComponent;
 }());

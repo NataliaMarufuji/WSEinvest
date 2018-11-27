@@ -9,6 +9,7 @@ import { SimulacaoComponent }  from './Simulacao/simulacao.component';
 import { SimulacaoMenuComponent }  from './SimulacaoMenu/simulacaoMenu.component';
 import { PassosComponent } from './Passos/passos.component';
 import { PerfilComponent } from './Perfil/perfil.component';
+import { ContaUsuarioComponent } from './ContaUsuario/ContaUsuario.component';
 import { InvestimentoEspecificoComponent } from './InvestimentoEspecifico/investimentoEspecifico.component';
 
 const appRoutes: Routes = [
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
    { path: 'primeiros-passos', component: PassosComponent},
    { path: 'investimentos', component: InvestimentosComponent},
    { path: 'investimento/:tipoInvestimento', component: InvestimentoEspecificoComponent},
+   { path: 'minha-conta' , component: ContaUsuarioComponent},
    { path: 'acoes', component: AcaoMenuComponent}
 ];
 

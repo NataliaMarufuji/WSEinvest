@@ -10,31 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
 var usuario_service_1 = require("../Usuario/usuario.service");
 var usuario_component_1 = require("../Usuario/usuario.component");
-var CadastroUsuarioComponent = /** @class */ (function () {
-    function CadastroUsuarioComponent(userService, route, router) {
+var ContaUsuarioComponent = /** @class */ (function () {
+    function ContaUsuarioComponent(userService) {
         this.usuario = new usuario_component_1.UsuarioComponent();
-        this.route = route;
-        this.router = router;
+        $.getScript('app/Scripts/collapsible.min.js');
         this.userService = userService;
+        this.usuario = this.userService.getUsuario();
     }
-    CadastroUsuarioComponent.prototype.cadastrarUsuario = function () {
-        this.userService.setUsuario(this.usuario);
-        this.userService.setAutenticado(true);
-        this.router.navigateByUrl('');
-    };
-    CadastroUsuarioComponent = __decorate([
+    ContaUsuarioComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'cadastro-usuario',
-            templateUrl: './cadastroUsuario.component.html',
-            styleUrls: ['./cadastroUsuario.component.css']
+            selector: 'conta-usuario',
+            templateUrl: './contaUsuario.component.html',
+            styleUrls: ['./contaUsuario.component.css']
         }),
-        __metadata("design:paramtypes", [usuario_service_1.UsuarioService, router_1.ActivatedRoute, router_1.Router])
-    ], CadastroUsuarioComponent);
-    return CadastroUsuarioComponent;
+        __metadata("design:paramtypes", [usuario_service_1.UsuarioService])
+    ], ContaUsuarioComponent);
+    return ContaUsuarioComponent;
 }());
-exports.CadastroUsuarioComponent = CadastroUsuarioComponent;
-//# sourceMappingURL=cadastroUsuario.component.js.map
+exports.ContaUsuarioComponent = ContaUsuarioComponent;
+//# sourceMappingURL=contaUsuario.component.js.map
