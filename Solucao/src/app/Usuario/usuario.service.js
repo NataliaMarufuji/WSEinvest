@@ -39,9 +39,8 @@ var UsuarioService = /** @class */ (function () {
         return this.http.get('app/JsonData/Login.json')
             .map(function (res) { return res.json(); });
     };
-    UsuarioService.prototype.cadastraUsuario = function (usuario) {
-        return this.http
-            .post("app/JsonData/Login.json", JSON.stringify(usuario))
+    UsuarioService.prototype.buscaMeusInvestimentos = function () {
+        return this.http.get('app/JsonData/MeusInvestimentos.json')
             .map(function (res) { return res.json(); });
     };
     UsuarioService = __decorate([

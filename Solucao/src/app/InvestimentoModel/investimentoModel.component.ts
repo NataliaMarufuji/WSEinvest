@@ -12,6 +12,7 @@ import { MenuComponent } from '../Menu/menu.component';
 })
 export class InvestimentoModelComponent { 
     
+    dataInvestimento: string;
     @Input() nome:string;
     @Input() descricao:string;
     @Input() investimentoEspecifico:boolean;

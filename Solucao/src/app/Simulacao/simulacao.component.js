@@ -16,24 +16,42 @@ var SimulacaoComponent = /** @class */ (function () {
         this.labelMeses = '180';
     }
     SimulacaoComponent.prototype.SelecionaInvestimento = function (tipoInvestimento) {
-        if (tipoInvestimento == 'prefixado') {
-            console.log("prefixado");
-        }
-        else if (tipoInvestimento == 'direto') {
-            console.log("direto");
-        }
-        else if (tipoInvestimento == 'ipca') {
-            console.log("ipca");
-        }
-        else if (tipoInvestimento == 'cdb_lc') {
-            console.log("cdb_lc");
-        }
-        else if (tipoInvestimento == 'lci_lca') {
-            console.log("lci_lca");
-        }
+        this.tipoInvestimento = tipoInvestimento;
+        this.updateTextInput(this.labelMeses, true);
     };
-    SimulacaoComponent.prototype.updateTextInput = function (event) {
-        this.labelMeses = event.target.value;
+    SimulacaoComponent.prototype.updateTextInput = function (event, investimentoMudou) {
+        if (!investimentoMudou) {
+            this.labelMeses = event.target.value;
+        }
+        this.investido = this.valor;
+        var valorPotencia = this.definePotencia();
+        var potencia = 0;
+        for (var i = 0; i < Number(this.labelMeses); i++) {
+            potencia += (valorPotencia);
+            console.log(potencia);
+        }
+        this.resultado = this.valor * potencia;
+        this.rendimento = this.resultado - this.valor;
+    };
+    SimulacaoComponent.prototype.definePotencia = function () {
+        if (this.tipoInvestimento == 'prefixado') {
+            return 1.0952;
+        }
+        else if (this.tipoInvestimento == 'direto') {
+            return 1.0054;
+        }
+        else if (this.tipoInvestimento == 'ipca') {
+            return 1.0456;
+        }
+        else if (this.tipoInvestimento == 'cdb_lc') {
+            return 1.0950;
+        }
+        else if (this.tipoInvestimento == 'lci_lca') {
+            return 1.0900;
+        }
+        else {
+            return 1.0952;
+        }
     };
     SimulacaoComponent = __decorate([
         core_1.Component({

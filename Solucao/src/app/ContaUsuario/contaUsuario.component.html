@@ -1,31 +1,23 @@
 <menu-inicial></menu-inicial>
 
-<div class="col s12 m7">
-    <h2 class="header">Minha conta</h2>
-    <div class="card horizontal">
-        <div class="card-image">
-        <img src="img/one.png">
-        </div>
-        <div class="card-stacked">
-        <div class="card-content">
-            <p>Nome completo: {{usuario.nome}}  {{usuario.sobrenome}}</p>
-            <p>CPF: {{usuario.cpf}}</p>
-            <p>E-mail: {{usuario.email}}</p>
-        </div>
+<div class="container">
+    <h5>Minha Conta</h5>
         <ul class="collapsible">
             <li>
-                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Meus investimentos</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Meus dados</div>
+                <div class="collapsible-body">
+                    <p>Nome completo: {{usuario.nome}}  {{usuario.sobrenome}}</p>
+                    <p>CPF: {{usuario.cpf}}</p>
+                    <p>E-mail: {{usuario.email}}</p>
+                </div>
             </li>
             <li>
-                <div class="collapsible-header"><i class="material-icons">place</i>Histórico de investimento</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                <div class="collapsible-header"><i class="material-icons">place</i>Meus investimentos</div>
+                <div class="collapsible-body"><span>Nenhum</span></div>
             </li>
             <li>
-                <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                <div class="collapsible-header"><i class="material-icons">whatshot</i>Histórico investimentos</div>
+                <div class="collapsible-body"><span>Nenhum</span></div>
             </li>
         </ul>
         </div>
-    </div>
- </div>

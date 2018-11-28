@@ -55,7 +55,9 @@ input[type=range]::-webkit-slider-thumb {
     box-shadow: 0 1px 0 0 #334A66;
 }
 
-
+.container-resultados{
+    margin-left: 10%!important;
+}
 
 
 

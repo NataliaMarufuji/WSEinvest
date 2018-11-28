@@ -43,10 +43,9 @@ export class UsuarioService {
             .map(res => res.json());
     }
 
-    cadastraUsuario(usuario: UsuarioComponent){
-        return this.http
-        .post("app/JsonData/Login.json", JSON.stringify(usuario))
-        .map(res => res.json());   
+    buscaMeusInvestimentos(){
+        return this.http.get('app/JsonData/MeusInvestimentos.json')
+            .map(res => res.json());
     }
 }
 

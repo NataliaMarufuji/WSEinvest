@@ -1,0 +1,79 @@
+[{
+    "nome": "Tesouro Direto",
+    "descricao": "Porta de entrada do mundo dos investimentos. Possui modalidades  prefixadas e pós-fixadas. Ideal para quem quer começar.",
+    "tipoInvestimento": "tesouro-direto",
+    "definicao": "Considerado a porta de entrada para o mundo dos investimentos, no Tesouro Direto você investe com pouco dinheiro e com o menor risco entre as aplicações do mercado. Ideal para quem quer começar a investir.",
+    "funcionamento": "Investir no tesouro direto é uma maneira acessível para fazer seu dinheiro render mais. Nele você investe em títulos públicos com rentabilidade variável dependendo do tipo de tesouro escolhido. Saiba mais vendo nosso vídeo.",
+    "caracteristicas": {
+        "risco": "Baixo",
+        "minimo": "R$ 30,00",
+        "preco":"Grátis",
+        "resgate":"Quando quiser",
+        "imposto": "15% a 22,5%"
+    },
+    "variacaoDetalhes":
+     [
+        {
+            "nome": "Tesouro Direto",
+            "codigo": "Tesouro Prefixado 2021",
+            "minimo": "R$34,02",
+            "rentabilidade": "7,96%",
+            "dataVencimento": "01/01/2021",
+            "diasParaVencer": "773",
+            "pagamentoJuros": "",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias" 
+        },
+        {
+            "nome": "Tesouro Direto",
+            "codigo": "Tesouro Prefixado 2025",
+            "minimo": "R$34,02",
+            "rentabilidade": "9,74%",
+            "dataVencimento": "01/01/2025",
+            "diasParaVencer": "2234",
+            "pagamentoJuros": "",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias" 
+        },
+        {
+            "nome": "Tesouro Direto",
+            "codigo": "T. P. com Juros Semestrais 2029",
+            "minimo": "R$30,92",
+            "rentabilidade": "10,15%",
+            "dataVencimento": "01/01/2029",
+            "diasParaVencer": "3695",
+            "pagamentoJuros": "Semestral",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias" 
+        }
+     ]
+},
+{
+    "nome": "Tesouro SELIC",
+    "descricao": "É o investimento mais escolhido para aplicações de curto prazo por sofrer menor volatilidade",
+    "tipoInvestimento": "tesouro-selic",
+    "definicao": "Considerado a porta de entrada para o mundo dos investimentos, no Tesouro Direto você investe com pouco dinheiro e com o menor risco entre as aplicações do mercado. Ideal para quem quer começar a investir.",
+    "funcionamento": "Investir no tesouro direto é uma maneira acessível para fazer seu dinheiro render mais. Nele você investe em títulos públicos com rentabilidade variável dependendo do tipo de tesouro escolhido. Saiba mais vendo nosso vídeo.",
+    "caracteristicas": {
+        "risco": "Baixo",
+        "minimo": "R$ 30,00",
+        "preco":"Grátis",
+        "resgate":"Quando quiser",
+        "imposto": "15% a 22,5%"
+    },
+    "variacaoDetalhes":
+     [
+        {
+            "nome": "Tesouro Selic",
+            "codigo": "Tesouro Selic 2023",
+            "minimo": "R$98,10",
+            "rentabilidade": "SELIC + 0,01%",
+            "dataVencimento": "01/03/2023",
+            "diasParaVencer": "1562",
+            "pagamentoJuros": "",
+            "IRRendimento": "22,5% a 15% de IR",
+            "IOFRendimento": "Isento após 30 dias" 
+        }
+     ]
+}
+]

@@ -2,11 +2,11 @@
 
 <div class="row">
       <ul class="tabs">
-        <li class="tab colunas"><a class="active" href="#simulacao" (click)="SelecionaInvestimento('prefixado')">Tesouro Prefixado</a></li>
-        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('direto')">Tesouro Selic</a></li>
-        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('ipca')">Tesouro IPCA+</a></li>
-        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('cdb_lc')">CDB e LC</a></li>
-        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('lci_lca')">LCI e LCA</a></li>
+        <li class="tab colunas"><a class="active" href="#simulacao" (click)="SelecionaInvestimento('prefixado', false)">Tesouro Prefixado</a></li>
+        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('direto', false)">Tesouro Selic</a></li>
+        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('ipca', false)">Tesouro IPCA+</a></li>
+        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('cdb_lc', false)">CDB e LC</a></li>
+        <li class="tab colunas"><a href="#simulacao" (click)="SelecionaInvestimento('lci_lca', false)">LCI e LCA</a></li>
       </ul>
 
     <div id="simulacao" class="col s12 container box active">
@@ -15,15 +15,8 @@
             <div class="row box_row">
                 <h4 class="meses">R$</h4>
                 <div class="input-field col s12">
-                    <input id="first_name" type="text" class="validate">
+                    <input id="first_name" type="text" class="validate" [(ngModel)]="valor" >
                     <label for="first_name">Valor inicial</label>
-                </div>
-            </div>
-            <div class="row box_row">
-                <h4 class="meses">R$</h4>
-                <div class="input-field col s12">
-                    <input id="first_name" type="text" class="validate">
-                    <label for="first_name">Depósito mensal</label>
                 </div>
             </div>
             <div>
@@ -36,8 +29,13 @@
                 </form>     
             </div>
         </div>    
-        <div class="container col s6">
-
+        <div class="container container-resultados col s4">
+            <h5>Total investido</h5>
+            <h6 class="meses">R$ {{investido| number:'.2-2'}}</h6>
+            <h5>Resultado do investimento</h5>
+            <h6 class="meses">R$ {{resultado| number:'.2-2'}}</h6>
+            <h5>Rendimento total</h5>
+            <h6 class="meses">R$ {{rendimento| number:'.2-2'}}</h6>
         </div>   
     </div>
 </div>
